@@ -10,12 +10,20 @@ R and RStudio is the software that we will be using to explore and learn about a
 
 Like even a simplest calculator, it just does what you ask (at least when you ask nicely!) but it requires the user to know what they want from it and to understand what it is telling you. A calculator can’t help a kid get the right answer to a multiplication problem if they don’t know the difference between multiplication and division and addition etc. And whilst a calculator is brilliant at doing the number crunching (and as a bonus, RStudio can help with turning the numbers into beautiful graphs and images too), even a calculator requires a thoughtful person to take the answers and make sensible interpretations from them. Therefore, we need to learn both about the concepts of statistical analysis on the one hand, and the processing of statistical information -through R- on the other. Over the next year, in these labs we will increasingly be using RStudio to focus on the latter, processing side, which will allow you to focus your energies on the conceptual side and its relevance for appreciating psychology.
 
-### Getting started with R Studio
+### Getting started with R Studio {#getting_started}
 
 For Lancaster University Psychology Students, we recommend using the virtual lab installation, through which you create a PC-in-a-web browser and can then use R Studio through AppsAnywhere: https://mylab.lancaster.ac.uk/ Connect to a "LU Windows 10 Lab". Once you've logged on to this virtual desktop, you should be presented with the AppsAnywhere window:
 ![](files/Week_1/AppsAnywhere.png)
 Search for "R Studio" and click launch. When RStudio starts, it will look something like this:
 ![](files/Week_1/RStudio.png)
+We also recommend that you set up your University "H drive" by [following the instructions here](https://answers.lancaster.ac.uk/display/ISS/Personal+filestore+%28H+drive%29+help)
+
+If you do this, you can organise your files in one place and access them from any university computer that you log in to, including the lab machines in the Levy Lab and the virtual machine (see above). So this effectively acts as a free, cloud-based storage solution for your work (and even personal stuff). 
+
+### File organisation
+
+However you choose to store your files, it's essential that you are careful about file organisation. As you progress through these exercises, you will find yourself downloading many data files, and creating many R scripts. Consider each week a new set of materials that should have it's own folder. Get used to organising your work and you will be well placed to revise the material at a later date.
+
 
 ### Let's do something!
 

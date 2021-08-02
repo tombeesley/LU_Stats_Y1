@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Week 1 - Introduction to R Studio | Statistics for Psychologists</title>
+  <title>3 Week 2 - | Statistics for Psychologists</title>
   <meta name="description" content="Course content for PSYC121 and PSYC122 at Lancaster University" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Week 1 - Introduction to R Studio | Statistics for Psychologists" />
+  <meta property="og:title" content="3 Week 2 - | Statistics for Psychologists" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="tombeesley/LU_PSYC121_122" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Week 1 - Introduction to R Studio | Statistics for Psychologists" />
+  <meta name="twitter:title" content="3 Week 2 - | Statistics for Psychologists" />
   
   <meta name="twitter:description" content="Course content for PSYC121 and PSYC122 at Lancaster University" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="week-2-.html"/>
+<link rel="prev" href="week-1-introduction-to-r-studio.html"/>
+<link rel="next" href="week5.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -226,67 +226,113 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-1---introduction-to-r-studio" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> Week 1 - Introduction to R Studio</h1>
-<p>The exercises in this section are designed to familiarise you with working in R Studio.</p>
-<div id="lab-work" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Lab Work</h2>
-<div id="introducing-rstudio" class="section level3" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> Introducing RStudio</h3>
-<p>R and RStudio is the software that we will be using to explore and learn about analysis in your Psychology degree. It’s a computational engine: a very snazzy calculator that you should see as your friend and ally in the journey to understand and appreciate psychology. It sits alongside what we teach about the concepts and interpretation of statistical analysis. R is the core software, RStudio is the interface for interacting with it.</p>
-<p>Like even a simplest calculator, it just does what you ask (at least when you ask nicely!) but it requires the user to know what they want from it and to understand what it is telling you. A calculator can’t help a kid get the right answer to a multiplication problem if they don’t know the difference between multiplication and division and addition etc. And whilst a calculator is brilliant at doing the number crunching (and as a bonus, RStudio can help with turning the numbers into beautiful graphs and images too), even a calculator requires a thoughtful person to take the answers and make sensible interpretations from them. Therefore, we need to learn both about the concepts of statistical analysis on the one hand, and the processing of statistical information -through R- on the other. Over the next year, in these labs we will increasingly be using RStudio to focus on the latter, processing side, which will allow you to focus your energies on the conceptual side and its relevance for appreciating psychology.</p>
-</div>
-<div id="getting_started" class="section level3" number="2.1.2">
-<h3><span class="header-section-number">2.1.2</span> Getting started with R Studio</h3>
-<p>For Lancaster University Psychology Students, we recommend using the virtual lab installation, through which you create a PC-in-a-web browser and can then use R Studio through AppsAnywhere: <a href="https://mylab.lancaster.ac.uk/" class="uri">https://mylab.lancaster.ac.uk/</a> Connect to a “LU Windows 10 Lab”. Once you’ve logged on to this virtual desktop, you should be presented with the AppsAnywhere window:
-<img src="files/Week_1/AppsAnywhere.png" />
-Search for “R Studio” and click launch. When RStudio starts, it will look something like this:
-<img src="files/Week_1/RStudio.png" />
-We also recommend that you set up your University “H drive” by <a href="https://answers.lancaster.ac.uk/display/ISS/Personal+filestore+%28H+drive%29+help">following the instructions here</a></p>
-<p>If you do this, you can organise your files in one place and access them from any university computer that you log in to, including the lab machines in the Levy Lab and the virtual machine (see above). So this effectively acts as a free, cloud-based storage solution for your work (and even personal stuff).</p>
-</div>
-<div id="file-organisation" class="section level3" number="2.1.3">
-<h3><span class="header-section-number">2.1.3</span> File organisation</h3>
-<p>However you choose to store your files, it’s essential that you are careful about file organisation. As you progress through these exercises, you will find yourself downloading many data files, and creating many R scripts. Consider each week a new set of materials that should have it’s own folder. Get used to organising your work and you will be well placed to revise the material at a later date.</p>
-</div>
-<div id="lets-do-something" class="section level3" number="2.1.4">
-<h3><span class="header-section-number">2.1.4</span> Let’s do something!</h3>
-<p>In the console window on the left hand side, there’s a command prompt “&gt;”. This is where we ask RStudio to do our bidding!</p>
+<div id="week-2--" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Week 2 -</h1>
+<div id="pre-lab-work" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Pre-lab work</h2>
+<p>Much of what a psychologist does involves numbers. For example, we:</p>
+<ul>
+<li>Measure behaviour in terms of numbers</li>
+<li>Use these numbers to provide summaries that indicate similarities and differences between different conditions (e.g., collections of male and female data used to examine gender differences).</li>
+<li>Analyse the raw data or the summaries to determine if there are “real” differences between our experimental conditions.</li>
+<li>Interpret the final numbers from an analysis in order to extract the underlying psychological differences.</li>
+</ul>
+<p>It should be obvious from the above that we need detailed information about what numbers mean, how to collect numbers, how to treat numbers and how to analyse numbers. In this lab we will start you along this journey. Let’s start by recapping some important concepts from last week:</p>
 <ol style="list-style-type: decimal">
-<li>Click in the console window and we will get R to work as a calculator. Type in:</li>
+<li>List the 4 types of measurement scales and for each give an example of how they might be used in psychology.
+2.For each of the types of numbers below give the scale of measurement, justifying your answer.</li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="week-1-introduction-to-r-studio.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="dv">5</span></span></code></pre></div>
-<p>and press enter. You should get the answer (amazing huh? OK, maybe not <em>that</em> amazing…). Use your imagination – ask a simple arithmetic question of your own choosing!</p>
-<ol start="2" style="list-style-type: decimal">
-<li>In the first analysis lecture, we looked at measures of central tendency and how to calculate them. So let’s get R to do these calculations also!</li>
+<ul>
+<li>Temperature in centigrade</li>
+<li>The number of children who point at a visual stimulus</li>
+<li>The number of errors made by each participant in a word reading task</li>
+<li>The rank attractiveness of each of 10 faces</li>
+<li>The time it takes to process read sentences</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li><ul>
+<li>What is the name given to a bell-shaped distribution?</li>
+<li>A distribution that is asymmetrical with a long tail that extends towards high numbers is called a ___________________ skewed distribution.</li>
+<li>A distribution with two peaks is called a ____________________ distribution.</li>
+</ul></li>
 </ol>
-<p>First, we tell R about the data from the lecture. Copy the following line and paste it into the console, then press enter to run it:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="week-1-introduction-to-r-studio.html#cb2-1" aria-hidden="true" tabindex="-1"></a>lecture1_data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">7</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">9</span>,<span class="dv">3</span>,<span class="dv">8</span>)</span></code></pre></div>
-<p>This creates an “object” called “lecture1_data”. We can then perform calculations on this object. For example, we can find the mean by using the following command (again, copy and paste)</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="week-1-introduction-to-r-studio.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(lecture1_data)</span></code></pre></div>
-<p>Check the answer is the same we found in the lecture (6!).</p>
-<p>Next, let’s ask for the median:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="week-1-introduction-to-r-studio.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(lecture1_data)</span></code></pre></div>
-<p>This also should be the answer from the lecture (7)</p>
-<p>R doesn’t have a single corresponding command for the <em>mode</em>, but we can use this series of commands:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="week-1-introduction-to-r-studio.html#cb5-1" aria-hidden="true" tabindex="-1"></a>getmode <span class="ot">&lt;-</span> </span>
-<span id="cb5-2"><a href="week-1-introduction-to-r-studio.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">function</span>(lecture1_data) {</span>
-<span id="cb5-3"><a href="week-1-introduction-to-r-studio.html#cb5-3" aria-hidden="true" tabindex="-1"></a>    uniqv <span class="ot">&lt;-</span> <span class="fu">unique</span>(lecture1_data)</span>
-<span id="cb5-4"><a href="week-1-introduction-to-r-studio.html#cb5-4" aria-hidden="true" tabindex="-1"></a>    uniqv[<span class="fu">which.max</span>(<span class="fu">tabulate</span>(<span class="fu">match</span>(lecture1_data, uniqv)))]</span>
-<span id="cb5-5"><a href="week-1-introduction-to-r-studio.html#cb5-5" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb5-6"><a href="week-1-introduction-to-r-studio.html#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="week-1-introduction-to-r-studio.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">getmode</span>(lecture1_data)</span></code></pre></div>
-<p>This is just a bit of clever jiggery-pokery that gets the mode.</p>
 </div>
-<div id="extra-content" class="section level3" number="2.1.5">
-<h3><span class="header-section-number">2.1.5</span> Extra content</h3>
-<p>The commands above are designed to show you that with RStudio active, you can get quick and accurate answers to material covered in PSYC121 lectures.</p>
-<p>All we have asked is that you write (or copy in) text to get the information. However, after the lab, you could play around with RStudio in your own time and think about the following:</p>
-<p>In R, “&lt;-“ is the assignment operator as in the command we used:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="week-1-introduction-to-r-studio.html#cb6-1" aria-hidden="true" tabindex="-1"></a>lecture1_data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">7</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">9</span>,<span class="dv">3</span>,<span class="dv">8</span>)</span></code></pre></div>
-<p>We create the variable label on the left (lecture1.data) and we give it those number on the right. The name lecture1.data is largely arbitrary: try use a variable of your own naming (your own name?) instead - and then use that alternative name for the other commands.</p>
-<p>What does that tell you about the text used to get the mode? Can you figure out what each line does?</p>
-<p>Also, once you have created a variable, you can check what the variable comprises by calling it at the command line. Just write its name, and R should respond with all the data points (all the X values it knows about). Take note that, as you write the variable label, R studio should offer to “auto-complete” the name. It only does that if it you have defined the variable, or are writing a known command.</p>
+<div id="r-studio-tasks" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> R Studio tasks</h2>
+<p>For a reminder of how to load R Studio see the section <a href="week-1-introduction-to-r-studio.html#getting_started">Getting started with R Studio</a></p>
+<p>Once you have accessed R Studio (and ideally setup your H drive), download the data file for this week, which is called [penelope.csv]](files/Week_2/penelope.csv), and the accompanying <a href="files/Week_2/PSYC121_week_2_script.R">R script</a> which we will use later.</p>
+<div id="how-much-does-the-cow-weigh-task-1" class="section level3" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> How much does the cow weigh? (Task 1)</h3>
+<p>Some 5 years ago, a large group of participants gave an estimate of the weight of Penelope the cow. Just over 17,000 guesses. And the distribution of guesses was something like this:
+<img src="files/Week_2/cow_weight.png" />
+What we can see from this graph is that:</p>
+<ol style="list-style-type: decimal">
+<li>Guesses formed a roughly normal distribution. There is a bit of a skew with a right0hand tail, but this is inevitable as a weight of less than 0 is physically impossible, but there is no limit of the semantics of a large guess.</li>
+<li>The mean guess weight (1,287 lbs) is very close to the actual (true) weight of the cow (1,355 lbs). So even though lots of people were inaccurate, a central tendency measure has a pretty good alignment with te true weight. This is known as the Wisdom of Crowds phenomenon, first identified by Galton in 1907 (though he suggested using the median weight)</li>
+</ol>
+<p>Let’s look at the PSYC121 student data collected on guessing the weight of Penelope, and ask whether it resembles the properties of this large dataset.</p>
+</div>
+<div id="finding-the-correct-folder" class="section level3" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Finding the correct folder</h3>
+<p>…we need something here about navigating to the folder and setting the working directory</p>
+</div>
+<div id="using-the-r-script" class="section level3" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Using the R script</h3>
+<p>Let’s start working with our data, by opening up the “PSYC121_week_2_script.R” file. This is “an R script” that contains a series of commands. We could type each of these in the console window (like we did in Week 1), but by having them in a script like this, it saves us typing them or copying and pasting them into the console. It also means we have a record of all the commands we have run.</p>
+<p>The first command is loads a library of functions:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="week-2-.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<p>To run this, simply click anywhere on line 1 to put the cursor there, and press ctrl+enter (cmd+enter on a mac) or click the button called run. You will see a number of messages appear in the console. Don’t worry about these, or worry too much about what exactly this command is doing. Essentially this is giving us some useful tools for our analysis. We will introduce the features of the <strong>tidyverse</strong> gradually during this course.</p>
+<p>Let’s now get our “weight guessing data” into RStudio. After we have loaded the tidyverse library, we can then use the <code>read_csv()</code> command to read in the dataset:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="week-2-.html#cb8-1" aria-hidden="true" tabindex="-1"></a>penelope <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;penelope.csv&quot;</span>)</span></code></pre></div>
+<p>Have a quick look at the data you have just imported / loaded. To do so, at the command line just write</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="week-2-.html#cb9-1" aria-hidden="true" tabindex="-1"></a>penelope</span></code></pre></div>
+<p>and the data will be reported. Note that “NA” means not available or missing data. Does this file structure make some sense to you?</p>
+</div>
+<div id="finding-the-mean-and-median-estimates" class="section level3" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> Finding the mean and median estimates</h3>
+<p>Use the data to answer the following questions…</p>
+<ol style="list-style-type: decimal">
+<li>What is the mean weight estimates?</li>
+<li>What is the standard deviation of the estimates?</li>
+<li>What range of estimates encompasses 2 standard deviations around the mean?</li>
+<li>What is the median weight of the estimates?</li>
+<li>Which of these central tendency measures is the more accurate measure of the true cow weight?</li>
+<li>What is the mean weight estimate (and standard deviation) for female respondents and non-female (male and non-binary) respondents?</li>
+</ol>
+<p>You may be thinking, how do I possibly do any of this?! Well this week all the commands you need are contained in the R script you have downloaded. Also, remember from last week, we explored the R command:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="week-2-.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(lecture1_data)</span></code></pre></div>
+<p>That gave us the mean of the small dataset “lecture1_data”. This time, we want to explore the Penelope dataset. But also, the lecture_data was just a single list of numbers. The Penelope file is more like a datasheet. So we need to tell RStudio which <strong>column</strong> we are interested in. RStudio uses the format <strong>data$column</strong>. Hence, we can ask</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="week-2-.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(penelope<span class="sc">$</span>estimate) </span></code></pre></div>
+<p>and to get a standard deviation we can use the command:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="week-2-.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(penelope<span class="sc">$</span>estimate)</span></code></pre></div>
+<p>So from this, can you work out what you would do to get the median value (remember from last week how we got the median value?). Add this command to your script, run it to get the median value, and save the file.</p>
+</div>
+<div id="referencing-columns" class="section level3" number="3.2.5">
+<h3><span class="header-section-number">3.2.5</span> Referencing columns</h3>
+<p>We have seen that:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="week-2-.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(penelope<span class="sc">$</span>estimate) </span></code></pre></div>
+<p>will provide a mean of the column “estimate”. In the third column, named “fweight”, we have the estimates of just the female respondents. In the fourth column, named “oweight”, we have the estimates of the “other” respondents (males and non-binary).</p>
+<p>So can you now figure out how you might get information about the other columns, such as the female data (only) or the non-female data? Try it, based on what you have just done. Does it work?</p>
+<p>You will find that the result of the this command produces an “NA” result. This means that the answer is “Not Available”, or in other words, is a “missing value”. This is because some of the values in this column are NA, and the mean of a column with NAs will always lead to the result NA.</p>
+<p>Instead, try this command:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="week-2-.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(penelope<span class="sc">$</span>fweight, <span class="at">na.rm =</span> <span class="cn">TRUE</span> )</span></code></pre></div>
+<p>Any different? The <code>na.rm = TRUE</code> instruction tells RStudio that missing data can be ignored in this mean calculation. (in technical language, <code>na.rm</code> is a parameter of the function <code>mean</code> that removes the NAs if set to TRUE)</p>
+</div>
+<div id="evaluating-the-range-of-estimates" class="section level3" number="3.2.6">
+<h3><span class="header-section-number">3.2.6</span> evaluating the range of estimates</h3>
+<p>mean +/- 2 SDs exercise…</p>
+<p>JOHN - this probably needs a bit more intro here - asking a bit too much at this stage?
+Q3 and Q5 above ask you to think about and process what R Studio tells you from the other commands you are using. The information comes from elsewhere in the activities you have done</p>
+</div>
+<div id="simple-graphs" class="section level3" number="3.2.7">
+<h3><span class="header-section-number">3.2.7</span> simple graphs</h3>
+<p>RStudio can be used to create graphical data plots that can help interpret datasets</p>
+<p>The first thing we can do is create a histogram distribution of guesses from the sample student data to compare with the previous large sample study (i.e. the 17,000 guesses):</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="week-2-.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(penelope<span class="sc">$</span>estimate)</span></code></pre></div>
+<p>We can also create a “box and whisker plot”. Here’s a general simple description of a box-and-whisker plot as a graphical representation of data:</p>
+<p><img src="files/Week_2/box_whisker.png" /></p>
+<p>We can create a box and whisker plot for the estimate column using the following command:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="week-2-.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(penelope<span class="sc">$</span>estimate)</span></code></pre></div>
 
 </div>
 </div>
@@ -296,8 +342,8 @@ We also recommend that you set up your University “H drive” by <a href="http
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="week-2-.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="week-1-introduction-to-r-studio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="week5.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

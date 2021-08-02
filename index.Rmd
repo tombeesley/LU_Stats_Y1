@@ -15,4 +15,4 @@ description: "Course content for PSYC121 and PSYC122 at Lancaster University"
 
 This is a collection of tuition material written for Psychology undergraduates at Lancaster University. At the moment the content represents the "lab materials" for the PSYC121 and PSYC122 modules in first year. They feature tuition of programming with R, with material designed to be accessible for students without any programming background. 
 
-The materials should be reasonably self-contained, though there are references to lecture content at times. Some of the lab content involves the use of "learnr tutorials". These are online, interactive tutorials, that run in a browser. You should be able to access these by clicking on the relevants links. 
+The materials should be reasonably self-contained, though there are references to lecture content at times. Some of the lab content involves the use of "learnr tutorials". These are online, interactive tutorials, that run in a browser. You should be able to access these by clicking on the relevant links. 
