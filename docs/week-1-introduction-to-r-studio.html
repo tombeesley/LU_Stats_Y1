@@ -234,27 +234,27 @@ Search for “R Studio” and click launch. When RStudio starts, it will look so
 <ol style="list-style-type: decimal">
 <li>Click in the console window and we will get R to work as a calculator. Type in:</li>
 </ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="week-1-introduction-to-r-studio.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="week-1-introduction-to-r-studio.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="dv">5</span></span></code></pre></div>
 <p>and press enter. You should get the answer (amazing huh? OK, maybe not <em>that</em> amazing…). Use your imagination – ask a simple arithmetic question of your own choosing!</p>
 <ol start="2" style="list-style-type: decimal">
 <li>In the first analysis lecture, we looked at measures of central tendency and how to calculate them. So let’s get R to do these calculations also!</li>
 </ol>
 <p>First, we tell R about the data from the lecture. Copy the following line and paste it into the console, then press enter to run it:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="week-1-introduction-to-r-studio.html#cb4-1" aria-hidden="true" tabindex="-1"></a>lecture1_data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">7</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">9</span>,<span class="dv">3</span>,<span class="dv">8</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="week-1-introduction-to-r-studio.html#cb2-1" aria-hidden="true" tabindex="-1"></a>lecture1_data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">7</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">9</span>,<span class="dv">3</span>,<span class="dv">8</span>)</span></code></pre></div>
 <p>This creates an “object” called “lecture1_data”. We can then perform calculations on this object. For example, we can find the mean by using the following command (again, copy and paste)</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="week-1-introduction-to-r-studio.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(lecture1_data)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="week-1-introduction-to-r-studio.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(lecture1_data)</span></code></pre></div>
 <p>Check the answer is the same we found in the lecture (6!).</p>
 <p>Next, let’s ask for the median:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="week-1-introduction-to-r-studio.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(lecture1_data)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="week-1-introduction-to-r-studio.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(lecture1_data)</span></code></pre></div>
 <p>This also should be the answer from the lecture (7)</p>
 <p>R doesn’t have a single corresponding command for the <em>mode</em>, but we can use this series of commands:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="week-1-introduction-to-r-studio.html#cb7-1" aria-hidden="true" tabindex="-1"></a>getmode <span class="ot">&lt;-</span> </span>
-<span id="cb7-2"><a href="week-1-introduction-to-r-studio.html#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">function</span>(lecture1_data) {</span>
-<span id="cb7-3"><a href="week-1-introduction-to-r-studio.html#cb7-3" aria-hidden="true" tabindex="-1"></a>    uniqv <span class="ot">&lt;-</span> <span class="fu">unique</span>(lecture1_data)</span>
-<span id="cb7-4"><a href="week-1-introduction-to-r-studio.html#cb7-4" aria-hidden="true" tabindex="-1"></a>    uniqv[<span class="fu">which.max</span>(<span class="fu">tabulate</span>(<span class="fu">match</span>(lecture1_data, uniqv)))]</span>
-<span id="cb7-5"><a href="week-1-introduction-to-r-studio.html#cb7-5" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb7-6"><a href="week-1-introduction-to-r-studio.html#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="week-1-introduction-to-r-studio.html#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">getmode</span>(lecture1_data)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="week-1-introduction-to-r-studio.html#cb5-1" aria-hidden="true" tabindex="-1"></a>getmode <span class="ot">&lt;-</span> </span>
+<span id="cb5-2"><a href="week-1-introduction-to-r-studio.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">function</span>(lecture1_data) {</span>
+<span id="cb5-3"><a href="week-1-introduction-to-r-studio.html#cb5-3" aria-hidden="true" tabindex="-1"></a>    uniqv <span class="ot">&lt;-</span> <span class="fu">unique</span>(lecture1_data)</span>
+<span id="cb5-4"><a href="week-1-introduction-to-r-studio.html#cb5-4" aria-hidden="true" tabindex="-1"></a>    uniqv[<span class="fu">which.max</span>(<span class="fu">tabulate</span>(<span class="fu">match</span>(lecture1_data, uniqv)))]</span>
+<span id="cb5-5"><a href="week-1-introduction-to-r-studio.html#cb5-5" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-6"><a href="week-1-introduction-to-r-studio.html#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="week-1-introduction-to-r-studio.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">getmode</span>(lecture1_data)</span></code></pre></div>
 <p>This is just a bit of clever jiggery-pokery that gets the mode.</p>
 </div>
 <div id="extra-content" class="section level3" number="2.1.4">
@@ -262,7 +262,7 @@ Search for “R Studio” and click launch. When RStudio starts, it will look so
 <p>The commands above are designed to show you that with RStudio active, you can get quick and accurate answers to material covered in PSYC121 lectures.</p>
 <p>All we have asked is that you write (or copy in) text to get the information. However, after the lab, you could play around with RStudio in your own time and think about the following:</p>
 <p>In R, “&lt;-“ is the assignment operator as in the command we used:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="week-1-introduction-to-r-studio.html#cb8-1" aria-hidden="true" tabindex="-1"></a>lecture1_data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">7</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">9</span>,<span class="dv">3</span>,<span class="dv">8</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="week-1-introduction-to-r-studio.html#cb6-1" aria-hidden="true" tabindex="-1"></a>lecture1_data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">7</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">9</span>,<span class="dv">3</span>,<span class="dv">8</span>)</span></code></pre></div>
 <p>We create the variable label on the left (lecture1.data) and we give it those number on the right. The name lecture1.data is largely arbitrary: try use a variable of your own naming (your own name?) instead - and then use that alternative name for the other commands.</p>
 <p>What does that tell you about the text used to get the mode? Can you figure out what each line does?</p>
 <p>Also, once you have created a variable, you can check what the variable comprises by calling it at the command line. Just write its name, and R should respond with all the data points (all the X values it knows about). Take note that, as you write the variable label, R studio should offer to “auto-complete” the name. It only does that if it you have defined the variable, or are writing a known command.</p>
