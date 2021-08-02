@@ -1,0 +1,93 @@
+# Week 7 - PSYC121 lab
+
+They say a picture paints a thousand words, so in this week's lab we will be learning some fundamental skills in **data visualisation** with the `ggplot()` commands.  We will also be looking at how we can run **one-sample t-tests in R** and we will use these to explore the estimates people gave for the median salary in the UK. Please ensure you do the pre-lab work before coming to class.
+
+## Pre-lab work
+
+### R Studio prep work
+
+In preparation for Tasks 2 and 3, please do the following things:
+
+1. Download all the files in the Week 7 lab folder on Moodle.
+
+2. Place the files in a suitable folder on the computer.
+
+3. Within R Studio, navigate to that folder in the "Files" pane and click OPEN (note the files are not shown in the folder)
+
+3. Select the "More" button and then "Set as Working Directory"
+
+4. Optional - create a new project in this folder ("File", "New Project", "Existing Directory")
+
+### Conceptual prep work
+
+A researcher conducts an experiment in which they ask a group of ten children aged 8 to read as many words as they can in 1 minute. They know from previous studies that children of this age typically read at 120 words per minute. This group of children have been reported as having difficulty with reading and the researchers want to see if their data are unusual. They find that the 10 children show a reading speed of 105, with a SD of 18. 
+
+1. What is the expected mean under the null hypothesis?
+
+2. What is the difference between the sample mean and the expected mean (mu)?
+
+3. What is the standard error of the mean?
+
+4. What is the value of t?
+
+5. What is the value for the "degrees of freedom"?
+
+6. What is the criterion value in the t-test table (see below), at the 5% level?
+
+7. Can we reject the null-hypothesis?
+
+## LAB TASK 1: Online tutorials 
+
+Task 1 of this lab will use an online tutorial. 
+To access the tutorial click here: https://psylancs.shinyapps.io/Week_7_learnr/
+
+## LAB TASK 2: R Studio exercises - visualising phone use
+
+Now that you have completed the online tutorials on `ggplot()`, it's time to put those skills into practice with a new data set, provided in "data_phone.csv". These data are just the phone time variables (estimated and actual) with the phone type nominal variable.
+
+Follow these steps to visualise these data: 
+
+1. Open the script "Week_7_Task_2.R" (see prep work)
+
+2. Run the first two lines of code `library(tidyverse)` and `data <- read_csv("data_phone.csv")`
+
+3. View the data with `view(data)`
+
+4. Inside the `aes()` command, map the variable *screen_time_estimate* to the x axis, and the variable *screen_time_actual* to the y axis. In general, does it look like people's estimates were accurate?
+
+5. Add a setting for *colour* outside of the `aes()`, to make all the points red.
+
+6. Map the *colour* to the variable *phone_type* (within `aes()`). Can you see any differences between people who have different phones?
+
+7. Change the axis titles and add a title for the graph using the `labs()` command.
+
+8. Change the theme of the graph.
+
+
+## LAB TASK 3: Conducting a one-sample t-test.
+
+In this task we will run some one-sample t-tests in R to examine people's estimates of UK salaries.
+
+1. Open the "Week_7_Task_3.R" script (see prep work)
+
+2. Run the first two lines of code `library(tidyverse)` and `data <- read_csv("data_salary.csv")`
+
+3. Run the third command. This runs a t-test on the salary estimates. The two settings (parameters) in the t-test function are *x*, which is the column of data we are interested in testing, and *mu*, which is the value we want to compare against. 
+
+4. Look at the output of the t-test. What does the *t* value indicate? Check the value against the criterion value in the t-test below (our N = 205, so use value for infinity). The *p* value tells you precisely how likely the data are, if the null hypothesis was true. Would we say this is statistically significant?
+
+5. Use the 4th command to filter the data to just those participants whose home location is the UK. Run the t-test on these data (you can copy the command, but note you will need to change the name of the data)
+
+6. In the same way as for Q6, check the salary ratings for those people whose home location is "Asia" and "Europe (not UK)". Note in each case what the t-test is telling you.
+
+## The t-test table (criterion values of t)
+![]("ttable.png")
+
+
+
+
+
+
+
+
+

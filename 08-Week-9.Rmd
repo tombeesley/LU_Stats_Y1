@@ -1,0 +1,94 @@
+# Week 9 - PSYC121 lab
+
+Today we will do some work on checking data for unusual values, determining what is an "outlier" and removing those data  before our analysis. In order to achieve this important step, we will learn a bit more about filtering data using the `filter()` command, and learn a new function, `mutate()`, which creates new columns.
+
+## Pre-lab work
+
+### R Studio prep work
+
+If you feel it may be useful, **you can work through Task 1 before the lab class**. In preparation for Task 2, please do the following things:
+
+1. Download all the files in the Week 8 lab folder on Moodle.
+
+2. Place the files in a suitable folder on the computer.
+
+3. Within R Studio, navigate to that folder in the "Files" pane and click OPEN (note the files are not shown in the folder)
+
+3. Select the "More" button and then "Set as Working Directory"
+
+4. Optional - create a new project in this folder ("File", "New Project", "Existing Directory")
+
+### Conceptual prep work
+
+This work gets you to play with the power calculations in R, as shown in the final slide of the lecture this week. 
+
+Start a new R Studio script and complete the following queries:
+
+1. Add a line `library(pwr)` and run this
+
+2. add the line `pwr.t.test(d = .5, n = 100)` and run this.
+
+3. What is the reported power value and what does this mean?
+
+4. If you want to achieve 99% power to see an effect of .3, what sample size do you need?
+
+5. With a sample size of 60 and power of 80%, what minimum effect size would we be able to detect?
+
+## LAB TASK 1: Online tutorials 
+
+Task 1 of this lab will use an online tutorial. 
+To access the tutorial click here: https://psylancs.shinyapps.io/Week_9_learnr/ (not available until Monday morning)
+
+## LAB TASK 2: 
+
+In this task we will look at the data for UK median salary estimates, and focus first on exploring the sample in order to identify and potentially remove any unusual data.
+
+1. Open the script "Week_9_Tasks.R" (see prep work)
+
+2. Run the first two lines of code `library(tidyverse)` and `data <- read_csv("gamble_salary.csv")`
+
+3. Add a `geom_boxplot()` to the `ggplot()` command to draw a box and whiskers plot, mapping the variable *salary_estimate* to either the x OR y axis. Note the outliers that are shown - we will now try to identify these data points and remove them.
+
+4. Add a new column (`mutate()`) to the data set, which uses the scale function to transform the salary estimates into z-scores.
+
+5. Complete the `arrange(desc())` to have the data sorted by the z-score column (use whatever name you made that column in the mutate command). Use `view(data)` to view the data set and get a sense of the data.
+
+Now that we have the salary estimates recoded as z-scores, we can think about what we might consider an extreme data point. If we remove z scores that are >2 and <-2 we will be removing ~5% of the extreme values. 
+
+![]("z_score_figure.png")
+
+6. Let's take a look at how many results have these extreme z values in our sample. Complete the two filter commands, one to see how many results give **z-scores over 2**, and one to see how many results give **z-scores under -2**. You should see 6 at the high end, and 11 at the low end.
+
+7. Once you are happy with how the filters are working, use a filter command to **remove** these outliers from the data.
+
+We will look at the salary estimates, as a function of whether respondants were "risk-seeking" or more "risk-averse". You may remember that you were asked the following question: 
+
+**Imagine you are on a game-show and you win £300. The presenter gives you have a choice: receive an additional £100 for sure, or take a gamble offering a 50% chance to gain £200 and a 50% chance to gain nothing. Which would you choose?**
+
+The classic finding is that around 80% of people play it safe and don't gamble. Whether people in our sample chose to gamble or not, is coded in the column "gamble_gain" (TRUE = gamble, FALSE = don't gamble). 
+
+8. Complete the group_by and summarise commands to assess whether the mean salary estimates differed between people who were risk-takers and those who were more risk-averse. Note that the summarise command includes a calculation of N, showing the number of each response: did our sample fit the original finding of ~80% people playing it safe?
+
+9. Run a unrelated (paired = FALSE) t-test on the data to see if people who are more risk averse or risk-seeking give different salary estimates.
+
+For those interested in the gambling variable, note that we asked a second version of the same scenario:
+
+**Imagine you are on a different game-show and you win £500. Here you are given a choice between either losing £100 from your winnings for sure, or taking a gamble offering a 50% chance to lose nothing and a 50% chance to lose £200. Which would you choose?**
+
+10. When phrased as a loss, more people tend to gamble. Did our sample show this result? Were the salary estimates of people who were willing to gamble under this scenario different to those not willing to gamble?
+
+11. Use the same formula you used in the t-statistic in the calculation of Cohen's d. What is the effect size?
+
+12. Work out what our final sample size was in the data after we conducted the filtering (hint: look in the environment). Use this to conduct a power analysis to see what effect size we could have seen with a power of 80%.
+
+## The t-test table (criterion values of t)
+![]("ttable.png"){height=75%}
+
+
+
+
+
+
+
+
+
