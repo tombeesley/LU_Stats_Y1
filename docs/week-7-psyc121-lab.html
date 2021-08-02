@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Statistics for Psychologists</title>
+  <title>3 Week 7 - PSYC121 lab | Statistics for Psychologists</title>
   <meta name="description" content="Course content for PSYC121 and PSYC122 at Lancaster University" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Statistics for Psychologists" />
+  <meta property="og:title" content="3 Week 7 - PSYC121 lab | Statistics for Psychologists" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="tombeesley/LU_PSYC121_122" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Statistics for Psychologists" />
+  <meta name="twitter:title" content="3 Week 7 - PSYC121 lab | Statistics for Psychologists" />
   
   <meta name="twitter:description" content="Course content for PSYC121 and PSYC122 at Lancaster University" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="week5.html"/>
+<link rel="prev" href="week5.html"/>
+<link rel="next" href="week-8-psyc121-lab.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -201,30 +201,81 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Statistics for Psychologists</h1>
-<p class="author"><em>John Towse, Tom Beesley, Margriet Groen, Rob Davies</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2021-08-02</em></p>
+<div id="week-7---psyc121-lab" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Week 7 - PSYC121 lab</h1>
+<p>They say a picture paints a thousand words, so in this week’s lab we will be learning some fundamental skills in <strong>data visualisation</strong> with the <code>ggplot()</code> commands. We will also be looking at how we can run <strong>one-sample t-tests in R</strong> and we will use these to explore the estimates people gave for the median salary in the UK. Please ensure you do the pre-lab work before coming to class.</p>
+<div id="pre-lab-work-1" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Pre-lab work</h2>
+<div id="r-studio-prep-work-1" class="section level3" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> R Studio prep work</h3>
+<p>In preparation for Tasks 2 and 3, please do the following things:</p>
+<ol style="list-style-type: decimal">
+<li><p>Download all the files in the Week 7 lab folder on Moodle.</p></li>
+<li><p>Place the files in a suitable folder on the computer.</p></li>
+<li><p>Within R Studio, navigate to that folder in the “Files” pane and click OPEN (note the files are not shown in the folder)</p></li>
+<li><p>Select the “More” button and then “Set as Working Directory”</p></li>
+<li><p>Optional - create a new project in this folder (“File”, “New Project”, “Existing Directory”)</p></li>
+</ol>
 </div>
-<div id="intro" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Intro</h1>
-<p>This is material for Psychology UGs at Lancaster Uni…</p>
-<p>We will be using tidyverse:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
-<p>You can do cool stuff like make graphs:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">%&gt;%</span> </span>
-<span id="cb2-2"><a href="index.html#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> disp, <span class="at">y =</span> mpg, <span class="at">colour =</span> cyl)) <span class="sc">+</span></span>
-<span id="cb2-3"><a href="index.html#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<div id="conceptual-prep-work-1" class="section level3" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Conceptual prep work</h3>
+<p>A researcher conducts an experiment in which they ask a group of ten children aged 8 to read as many words as they can in 1 minute. They know from previous studies that children of this age typically read at 120 words per minute. This group of children have been reported as having difficulty with reading and the researchers want to see if their data are unusual. They find that the 10 children show a reading speed of 105, with a SD of 18.</p>
+<ol style="list-style-type: decimal">
+<li><p>What is the expected mean under the null hypothesis?</p></li>
+<li><p>What is the difference between the sample mean and the expected mean (mu)?</p></li>
+<li><p>What is the standard error of the mean?</p></li>
+<li><p>What is the value of t?</p></li>
+<li><p>What is the value for the “degrees of freedom”?</p></li>
+<li><p>What is the criterion value in the t-test table (see below), at the 5% level?</p></li>
+<li><p>Can we reject the null-hypothesis?</p></li>
+</ol>
+</div>
+</div>
+<div id="lab-task-1-online-tutorials" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> LAB TASK 1: Online tutorials</h2>
+<p>Task 1 of this lab will use an online tutorial.
+To access the tutorial click here: <a href="https://psylancs.shinyapps.io/Week_7_learnr/" class="uri">https://psylancs.shinyapps.io/Week_7_learnr/</a></p>
+</div>
+<div id="lab-task-2-r-studio-exercises---visualising-phone-use" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> LAB TASK 2: R Studio exercises - visualising phone use</h2>
+<p>Now that you have completed the online tutorials on <code>ggplot()</code>, it’s time to put those skills into practice with a new data set, provided in “data_phone.csv”. These data are just the phone time variables (estimated and actual) with the phone type nominal variable.</p>
+<p>Follow these steps to visualise these data:</p>
+<ol style="list-style-type: decimal">
+<li><p>Open the script “Week_7_Task_2.R” (see prep work)</p></li>
+<li><p>Run the first two lines of code <code>library(tidyverse)</code> and <code>data &lt;- read_csv("data_phone.csv")</code></p></li>
+<li><p>View the data with <code>view(data)</code></p></li>
+<li><p>Inside the <code>aes()</code> command, map the variable <em>screen_time_estimate</em> to the x axis, and the variable <em>screen_time_actual</em> to the y axis. In general, does it look like people’s estimates were accurate?</p></li>
+<li><p>Add a setting for <em>colour</em> outside of the <code>aes()</code>, to make all the points red.</p></li>
+<li><p>Map the <em>colour</em> to the variable <em>phone_type</em> (within <code>aes()</code>). Can you see any differences between people who have different phones?</p></li>
+<li><p>Change the axis titles and add a title for the graph using the <code>labs()</code> command.</p></li>
+<li><p>Change the theme of the graph.</p></li>
+</ol>
+</div>
+<div id="lab-task-3-conducting-a-one-sample-t-test." class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> LAB TASK 3: Conducting a one-sample t-test.</h2>
+<p>In this task we will run some one-sample t-tests in R to examine people’s estimates of UK salaries.</p>
+<ol style="list-style-type: decimal">
+<li><p>Open the “Week_7_Task_3.R” script (see prep work)</p></li>
+<li><p>Run the first two lines of code <code>library(tidyverse)</code> and <code>data &lt;- read_csv("data_salary.csv")</code></p></li>
+<li><p>Run the third command. This runs a t-test on the salary estimates. The two settings (parameters) in the t-test function are <em>x</em>, which is the column of data we are interested in testing, and <em>mu</em>, which is the value we want to compare against.</p></li>
+<li><p>Look at the output of the t-test. What does the <em>t</em> value indicate? Check the value against the criterion value in the t-test below (our N = 205, so use value for infinity). The <em>p</em> value tells you precisely how likely the data are, if the null hypothesis was true. Would we say this is statistically significant?</p></li>
+<li><p>Use the 4th command to filter the data to just those participants whose home location is the UK. Run the t-test on these data (you can copy the command, but note you will need to change the name of the data)</p></li>
+<li><p>In the same way as for Q6, check the salary ratings for those people whose home location is “Asia” and “Europe (not UK)”. Note in each case what the t-test is telling you.</p></li>
+</ol>
+</div>
+<div id="the-t-test-table-criterion-values-of-t" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> The t-test table (criterion values of t)</h2>
+<p><img src="%22ttable.png%22" /></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="week5.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="week5.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="week-8-psyc121-lab.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

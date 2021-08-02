@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Statistics for Psychologists</title>
+  <title>5 Week 9 - PSYC121 lab | Statistics for Psychologists</title>
   <meta name="description" content="Course content for PSYC121 and PSYC122 at Lancaster University" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Statistics for Psychologists" />
+  <meta property="og:title" content="5 Week 9 - PSYC121 lab | Statistics for Psychologists" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="tombeesley/LU_PSYC121_122" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Statistics for Psychologists" />
+  <meta name="twitter:title" content="5 Week 9 - PSYC121 lab | Statistics for Psychologists" />
   
   <meta name="twitter:description" content="Course content for PSYC121 and PSYC122 at Lancaster University" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="week-8-psyc121-lab.html"/>
 
-<link rel="next" href="week5.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -201,30 +201,84 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Statistics for Psychologists</h1>
-<p class="author"><em>John Towse, Tom Beesley, Margriet Groen, Rob Davies</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2021-08-02</em></p>
+<div id="week-9---psyc121-lab" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Week 9 - PSYC121 lab</h1>
+<p>Today we will do some work on checking data for unusual values, determining what is an “outlier” and removing those data before our analysis. In order to achieve this important step, we will learn a bit more about filtering data using the <code>filter()</code> command, and learn a new function, <code>mutate()</code>, which creates new columns.</p>
+<div id="pre-lab-work-3" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Pre-lab work</h2>
+<div id="r-studio-prep-work-3" class="section level3" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> R Studio prep work</h3>
+<p>If you feel it may be useful, <strong>you can work through Task 1 before the lab class</strong>. In preparation for Task 2, please do the following things:</p>
+<ol style="list-style-type: decimal">
+<li><p>Download all the files in the Week 8 lab folder on Moodle.</p></li>
+<li><p>Place the files in a suitable folder on the computer.</p></li>
+<li><p>Within R Studio, navigate to that folder in the “Files” pane and click OPEN (note the files are not shown in the folder)</p></li>
+<li><p>Select the “More” button and then “Set as Working Directory”</p></li>
+<li><p>Optional - create a new project in this folder (“File”, “New Project”, “Existing Directory”)</p></li>
+</ol>
 </div>
-<div id="intro" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Intro</h1>
-<p>This is material for Psychology UGs at Lancaster Uni…</p>
-<p>We will be using tidyverse:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
-<p>You can do cool stuff like make graphs:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">%&gt;%</span> </span>
-<span id="cb2-2"><a href="index.html#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> disp, <span class="at">y =</span> mpg, <span class="at">colour =</span> cyl)) <span class="sc">+</span></span>
-<span id="cb2-3"><a href="index.html#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<div id="conceptual-prep-work-3" class="section level3" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Conceptual prep work</h3>
+<p>This work gets you to play with the power calculations in R, as shown in the final slide of the lecture this week.</p>
+<p>Start a new R Studio script and complete the following queries:</p>
+<ol style="list-style-type: decimal">
+<li><p>Add a line <code>library(pwr)</code> and run this</p></li>
+<li><p>add the line <code>pwr.t.test(d = .5, n = 100)</code> and run this.</p></li>
+<li><p>What is the reported power value and what does this mean?</p></li>
+<li><p>If you want to achieve 99% power to see an effect of .3, what sample size do you need?</p></li>
+<li><p>With a sample size of 60 and power of 80%, what minimum effect size would we be able to detect?</p></li>
+</ol>
+</div>
+</div>
+<div id="lab-task-1-online-tutorials-2" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> LAB TASK 1: Online tutorials</h2>
+<p>Task 1 of this lab will use an online tutorial.
+To access the tutorial click here: <a href="https://psylancs.shinyapps.io/Week_9_learnr/" class="uri">https://psylancs.shinyapps.io/Week_9_learnr/</a> (not available until Monday morning)</p>
+</div>
+<div id="lab-task-2" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> LAB TASK 2:</h2>
+<p>In this task we will look at the data for UK median salary estimates, and focus first on exploring the sample in order to identify and potentially remove any unusual data.</p>
+<ol style="list-style-type: decimal">
+<li><p>Open the script “Week_9_Tasks.R” (see prep work)</p></li>
+<li><p>Run the first two lines of code <code>library(tidyverse)</code> and <code>data &lt;- read_csv("gamble_salary.csv")</code></p></li>
+<li><p>Add a <code>geom_boxplot()</code> to the <code>ggplot()</code> command to draw a box and whiskers plot, mapping the variable <em>salary_estimate</em> to either the x OR y axis. Note the outliers that are shown - we will now try to identify these data points and remove them.</p></li>
+<li><p>Add a new column (<code>mutate()</code>) to the data set, which uses the scale function to transform the salary estimates into z-scores.</p></li>
+<li><p>Complete the <code>arrange(desc())</code> to have the data sorted by the z-score column (use whatever name you made that column in the mutate command). Use <code>view(data)</code> to view the data set and get a sense of the data.</p></li>
+</ol>
+<p>Now that we have the salary estimates recoded as z-scores, we can think about what we might consider an extreme data point. If we remove z scores that are &gt;2 and &lt;-2 we will be removing ~5% of the extreme values.</p>
+<p><img src="%22z_score_figure.png%22" /></p>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Let’s take a look at how many results have these extreme z values in our sample. Complete the two filter commands, one to see how many results give <strong>z-scores over 2</strong>, and one to see how many results give <strong>z-scores under -2</strong>. You should see 6 at the high end, and 11 at the low end.</p></li>
+<li><p>Once you are happy with how the filters are working, use a filter command to <strong>remove</strong> these outliers from the data.</p></li>
+</ol>
+<p>We will look at the salary estimates, as a function of whether respondants were “risk-seeking” or more “risk-averse”. You may remember that you were asked the following question:</p>
+<p><strong>Imagine you are on a game-show and you win £300. The presenter gives you have a choice: receive an additional £100 for sure, or take a gamble offering a 50% chance to gain £200 and a 50% chance to gain nothing. Which would you choose?</strong></p>
+<p>The classic finding is that around 80% of people play it safe and don’t gamble. Whether people in our sample chose to gamble or not, is coded in the column “gamble_gain” (TRUE = gamble, FALSE = don’t gamble).</p>
+<ol start="8" style="list-style-type: decimal">
+<li><p>Complete the group_by and summarise commands to assess whether the mean salary estimates differed between people who were risk-takers and those who were more risk-averse. Note that the summarise command includes a calculation of N, showing the number of each response: did our sample fit the original finding of ~80% people playing it safe?</p></li>
+<li><p>Run a unrelated (paired = FALSE) t-test on the data to see if people who are more risk averse or risk-seeking give different salary estimates.</p></li>
+</ol>
+<p>For those interested in the gambling variable, note that we asked a second version of the same scenario:</p>
+<p><strong>Imagine you are on a different game-show and you win £500. Here you are given a choice between either losing £100 from your winnings for sure, or taking a gamble offering a 50% chance to lose nothing and a 50% chance to lose £200. Which would you choose?</strong></p>
+<ol start="10" style="list-style-type: decimal">
+<li><p>When phrased as a loss, more people tend to gamble. Did our sample show this result? Were the salary estimates of people who were willing to gamble under this scenario different to those not willing to gamble?</p></li>
+<li><p>Use the same formula you used in the t-statistic in the calculation of Cohen’s d. What is the effect size?</p></li>
+<li><p>Work out what our final sample size was in the data after we conducted the filtering (hint: look in the environment). Use this to conduct a power analysis to see what effect size we could have seen with a power of 80%.</p></li>
+</ol>
+</div>
+<div id="the-t-test-table-criterion-values-of-t-2" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> The t-test table (criterion values of t)</h2>
+<p><img src="%22ttable.png%22" style="height:75.0%" /></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="week-8-psyc121-lab.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="week5.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

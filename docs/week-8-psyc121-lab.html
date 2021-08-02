@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Statistics for Psychologists</title>
+  <title>4 Week 8 - PSYC121 lab | Statistics for Psychologists</title>
   <meta name="description" content="Course content for PSYC121 and PSYC122 at Lancaster University" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Statistics for Psychologists" />
+  <meta property="og:title" content="4 Week 8 - PSYC121 lab | Statistics for Psychologists" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="tombeesley/LU_PSYC121_122" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Statistics for Psychologists" />
+  <meta name="twitter:title" content="4 Week 8 - PSYC121 lab | Statistics for Psychologists" />
   
   <meta name="twitter:description" content="Course content for PSYC121 and PSYC122 at Lancaster University" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="week5.html"/>
+<link rel="prev" href="week-7-psyc121-lab.html"/>
+<link rel="next" href="week-9-psyc121-lab.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -201,30 +201,82 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Statistics for Psychologists</h1>
-<p class="author"><em>John Towse, Tom Beesley, Margriet Groen, Rob Davies</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2021-08-02</em></p>
+<div id="week-8---psyc121-lab" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Week 8 - PSYC121 lab</h1>
+<p>Today we will continue to develop our skills in <strong>data visualisation</strong> with the <code>ggplot()</code> commands. We will look at plotting means and standard errors, and at how geoms can share aesthetic mappings. We will explore our data on the famous “Stroop Task” and calculate</p>
+<div id="pre-lab-work-2" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Pre-lab work</h2>
+<div id="r-studio-prep-work-2" class="section level3" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> R Studio prep work</h3>
+<p>If you feel it may be useful, <strong>you can work through Task 1 before the lab class</strong>. In preparation for Tasks 2 and 3, please do the following things:</p>
+<ol style="list-style-type: decimal">
+<li><p>Download all the files in the Week 8 lab folder on Moodle.</p></li>
+<li><p>Place the files in a suitable folder on the computer.</p></li>
+<li><p>Within R Studio, navigate to that folder in the “Files” pane and click OPEN (note the files are not shown in the folder)</p></li>
+<li><p>Select the “More” button and then “Set as Working Directory”</p></li>
+<li><p>Optional - create a new project in this folder (“File”, “New Project”, “Existing Directory”)</p></li>
+</ol>
 </div>
-<div id="intro" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Intro</h1>
-<p>This is material for Psychology UGs at Lancaster Uni…</p>
-<p>We will be using tidyverse:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
-<p>You can do cool stuff like make graphs:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">%&gt;%</span> </span>
-<span id="cb2-2"><a href="index.html#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> disp, <span class="at">y =</span> mpg, <span class="at">colour =</span> cyl)) <span class="sc">+</span></span>
-<span id="cb2-3"><a href="index.html#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<div id="conceptual-prep-work-2" class="section level3" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Conceptual prep work</h3>
+<p>A researcher wants to replicate a published finding that submerging your arm into freezing cold water for 60 seconds impaires your ability to memorise lists of words. They have 15 people complete the memory test before and after submerging their arm. The mean score before is 17 items correct, and the mean score after is 12 items correct. The SD of the difference scores is 9.</p>
+<ol style="list-style-type: decimal">
+<li><p>What is the null hypothesis?</p></li>
+<li><p>What is the mean difference score?</p></li>
+<li><p>What is the SE of the difference scores?</p></li>
+<li><p>What is the t value?</p></li>
+<li><p>What are the degrees of freedom?</p></li>
+<li><p>What is the criterion value for t? (see table below)</p></li>
+<li><p>Is our t value significant?</p></li>
+<li><p>Is this a directional hypothesis? And what does that mean for our criterion value?</p></li>
+</ol>
+</div>
+</div>
+<div id="lab-task-1-online-tutorials-1" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> LAB TASK 1: Online tutorials</h2>
+<p>Task 1 of this lab will use an online tutorial.
+To access the tutorial click here: <a href="https://psylancs.shinyapps.io/Week_8_learnr/" class="uri">https://psylancs.shinyapps.io/Week_8_learnr/</a></p>
+</div>
+<div id="lab-task-2-exploring-the-stroop-effect" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> LAB TASK 2: Exploring the Stroop effect</h2>
+<p>The “Stroop Effect” is a classic demonstration of automaticity of behaviour. Participants have to say the colour a word is printed in, which is an easy task for a “compatible” stimulus like , and a much more difficult task for an “incompatible” stimulus like . We can’t help but read the text - it has seemingly become an automatic process.</p>
+<p><img src="%22stroop.png%22" style="width:50.0%" /></p>
+<p>In this task we will calculate the means and standard errors of the means. We will then plot them using ggplot().</p>
+<ol style="list-style-type: decimal">
+<li><p>Open the script “Week_8_Tasks.R” (see prep work)</p></li>
+<li><p>Run the first two lines of code <code>library(tidyverse)</code> and <code>data &lt;- read_csv("data_stroop.csv")</code></p></li>
+<li><p>View the data with <code>view(data)</code>. You will see that the data are a little different from the data we have worked with previously. We have an ID variable, which gives a unique number for each person. Each person has 3 rows. This is because the different conditions of the stroop task is a <em>within-subjects</em> variable. For data like this it is often useful to have them arranged in what is referred to as “long format”, with multiple rows for each response the participant provided. For the current data that means we have a variable called <em>stroop_condition</em>, which is our IV, and one called <em>stroop_time</em> which is our DV.</p></li>
+<li><p>Return to the Week_8_Tasks.R script. You will see we have provided you with the “scaffold” of a complete analysis process for the Stroop data. The raw data will be grouped and then summarised as means and SEs, and then plotted with columns and error bars. This is very similar to the commands used at the end of the learnr tutorial, and you can refer to that analysis if you get stuck here. <strong>Your job is to carefully work through the code and fill in the parts that are marked MISSING</strong>. By the end, you should have a graph with 3 columns, with the standard error of the means plotted on top.</p></li>
+<li><p>Add a <code>labs()</code> layer to the plot to change the axis titles, and the title of the plot.</p></li>
+<li><p>Change the theme of the plot</p></li>
+<li><p>Map the fill aesthetic to the variable <em>stroop_condition</em></p></li>
+<li><p>Manually change the colours of the columns with (e.g.) <code>scale_fill_manual(values = c("darkgreen", "darkblue", "darkred"))</code>. Open the RColor.pdf in the Week 8 files for more colours than you’ll probably ever want!</p></li>
+<li><p>Click Export-&gt;Save as Image. Then show it off to the world (i.e., the Teams channel)</p></li>
+</ol>
+</div>
+<div id="lab-task-3-testing-if-the-differences-are-real." class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> LAB TASK 3: Testing if the differences are real.</h2>
+<p>To test whether people performed differently in the different Stroop conditions, we can run a series of <em>related samples t-tests</em>. We will use a slightly modified version of our command for conducting the one-sample t-test in Week 7. First though, we must use a <code>filter()</code> to restrict the data to just two conditions on the <em>stroop_condition</em> variable. This is because a related samples t-test looks at the difference between two means (and only two), so the column we use needs to have just two levels.</p>
+<ol style="list-style-type: decimal">
+<li><p>Continue working with the “Week_8_Tasks.R” script</p></li>
+<li><p>Use the filter command to restrict the data to two of the conditions. Note that the filter uses an “|” symbol, which means “or”.</p></li>
+<li><p>Run the t-test on this selection of data, to compare the means from these two levels of the IV. Is the result significant? Note the t value and the p value. How would you express this as a statement in a report?</p></li>
+<li><p>With 3 levels to the variable <em>stroop_condition</em> there are 3 possible comparisons we can make. Complete these by copying and pasting the commands, editing each to make a different filter selection, and then run the t-test. Make sure you interpret the results of the t-tests.</p></li>
+</ol>
+</div>
+<div id="the-t-test-table-criterion-values-of-t-1" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> The t-test table (criterion values of t)</h2>
+<p><img src="%22ttable.png%22" /></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="week5.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="week-7-psyc121-lab.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="week-9-psyc121-lab.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
