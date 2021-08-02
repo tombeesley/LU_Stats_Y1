@@ -28,7 +28,7 @@ It should be obvious from the above that we need detailed information about what
 
 For a reminder of how to load R Studio see the section [Getting started with R Studio] 
 
-Once you have accessed R Studio (and ideally setup your H drive), download the data file for this week, which is called [penelope.csv]](files/Week_2/penelope.csv), and the accompanying [R script](files/Week_2/PSYC121_week_2_script.R) which we will use later. 
+Once you have accessed R Studio (and ideally setup your H drive), download the data file for this week, which is called [penelope.csv](files/Week_2/penelope.csv), and the accompanying [R script](files/Week_2/PSYC121_week_2_script.R) which we will use later. 
 
 ### How much does the cow weigh? (Task 1)
 
