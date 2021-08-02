@@ -1,10 +1,16 @@
 intro
+week-1---introduction-to-r-studio
+lab-work
+introducing-rstudio
+getting-started-with-r-studio
+lets-do-something
+extra-content
 week5
 pre-lab-work
 online-tutorials
 r-studio-prep-work
 conceptual-prep-work
-lab-work
+lab-work-1
 r-studio-exercises---music-preferences-task-1
 exploring-binomial-distributions-and-the-sign-test-task-2.
 the-sign-test-table

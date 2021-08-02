@@ -13,17 +13,17 @@ To access the tutorial click here: https://psylancs.shinyapps.io/Week_6_learnr/
 ### R Studio prep work
 In preparation for the lab tasks, please do the following things:
 
-[Download the data file here](files/location_music_Wk6.csv)
+[Download the data file here]
 
-1. Download the data file "location_music_Wk6.csv", "Week_6_lab.R" and "Week_6_binomial.R" files from the Week 6 lab resources folder on Moodle.
+1. Download the files [location_music_Wk6.csv](files/Week_6/location_music_Wk6.csv), [Week_6_lab.R](files/Week_6/Week_6_lab.R) and [Week_6_binomial.R](files/Week_6/Week_6_binomial).
 
-2. Place the two files in a suitable folder on the computer.
+2. Place these files in a suitable folder on the computer.
 
 3. Within R Studio, navigate to that folder in the "Files" pane.
 
 3. Select the "More" button and then "Set as Working Directory"
 
-4. Optional - create a new project in this folder ("File", "New Project", "Existing Directory")
+4. Recommended - create a new project in this folder ("File", "New Project", "Existing Directory")
 
 ### Conceptual prep work
 A researcher conducts an experiment to find out if an anti-smoking advert changes the amount people smoke. He has people record the number of cigarettes they smoke for a week before watching the advert, and then for a week after watching the advert. The data are shown below:
@@ -93,4 +93,4 @@ Download the "Week_6_binomial.R" script from the Moodle forum. This is a version
 
 ### The Sign Test table
 
-![sign test table](files/sign_test_table.png)
+![](files/Week_6/sign_test_table.png)
