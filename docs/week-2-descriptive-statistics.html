@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>7 Week 9 - PSYC121 lab | Statistics for Psychologists</title>
+  <title>3 Week 2 - Descriptive statistics | Statistics for Psychologists</title>
   <meta name="description" content="Course content for PSYC121 and PSYC122 at Lancaster University" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="7 Week 9 - PSYC121 lab | Statistics for Psychologists" />
+  <meta property="og:title" content="3 Week 2 - Descriptive statistics | Statistics for Psychologists" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="tombeesley/LU_PSYC121_122" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="7 Week 9 - PSYC121 lab | Statistics for Psychologists" />
+  <meta name="twitter:title" content="3 Week 2 - Descriptive statistics | Statistics for Psychologists" />
   
   <meta name="twitter:description" content="Course content for PSYC121 and PSYC122 at Lancaster University" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="week-8-psyc121-lab.html"/>
-
+<link rel="prev" href="week-1-introduction-to-r-studio.html"/>
+<link rel="next" href="week5.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -226,75 +226,115 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-9---psyc121-lab" class="section level1" number="7">
-<h1><span class="header-section-number">7</span> Week 9 - PSYC121 lab</h1>
-<p>Today we will do some work on checking data for unusual values, determining what is an “outlier” and removing those data before our analysis. In order to achieve this important step, we will learn a bit more about filtering data using the <code>filter()</code> command, and learn a new function, <code>mutate()</code>, which creates new columns.</p>
-<div id="pre-lab-work-4" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Pre-lab work</h2>
-<div id="r-studio-prep-work-3" class="section level3" number="7.1.1">
-<h3><span class="header-section-number">7.1.1</span> R Studio prep work</h3>
-<p>If you feel it may be useful, <strong>you can work through Task 1 before the lab class</strong>. In preparation for Task 2, please do the following things:</p>
+<div id="week-2---descriptive-statistics" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Week 2 - Descriptive statistics</h1>
+<div id="pre-lab-work" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Pre-lab work</h2>
+<p>Much of what a psychologist does involves numbers. For example, we:</p>
+<ul>
+<li>Measure behaviour in terms of numbers</li>
+<li>Use these numbers to provide summaries that indicate similarities and differences between different conditions (e.g., collections of male and female data used to examine gender differences).</li>
+<li>Analyse the raw data or the summaries to determine if there are “real” differences between our experimental conditions.</li>
+<li>Interpret the final numbers from an analysis in order to extract the underlying psychological differences.</li>
+</ul>
+<p>It should be obvious from the above that we need detailed information about what numbers mean, how to collect numbers, how to treat numbers and how to analyse numbers. In this lab we will start you along this journey. Let’s start by recapping some important concepts from last week:</p>
 <ol style="list-style-type: decimal">
-<li><p>Download all the files in the Week 8 lab folder on Moodle.</p></li>
-<li><p>Place the files in a suitable folder on the computer.</p></li>
-<li><p>Within R Studio, navigate to that folder in the “Files” pane and click OPEN (note the files are not shown in the folder)</p></li>
-<li><p>Select the “More” button and then “Set as Working Directory”</p></li>
-<li><p>Optional - create a new project in this folder (“File”, “New Project”, “Existing Directory”)</p></li>
+<li>List the 4 types of measurement scales and for each give an example of how they might be used in psychology.
+2.For each of the types of numbers below give the scale of measurement, justifying your answer.</li>
+</ol>
+<ul>
+<li>Temperature in centigrade</li>
+<li>The number of children who point at a visual stimulus</li>
+<li>The number of errors made by each participant in a word reading task</li>
+<li>The rank attractiveness of each of 10 faces</li>
+<li>The time it takes to process read sentences</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li><ul>
+<li>What is the name given to a bell-shaped distribution?</li>
+<li>A distribution that is asymmetrical with a long tail that extends towards high numbers is called a ___________________ skewed distribution.</li>
+<li>A distribution with two peaks is called a ____________________ distribution.</li>
+</ul></li>
 </ol>
 </div>
-<div id="conceptual-prep-work-3" class="section level3" number="7.1.2">
-<h3><span class="header-section-number">7.1.2</span> Conceptual prep work</h3>
-<p>This work gets you to play with the power calculations in R, as shown in the final slide of the lecture this week.</p>
-<p>Start a new R Studio script and complete the following queries:</p>
+<div id="r-studio-tasks" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> R Studio tasks</h2>
+<p>For a reminder of how to load R Studio see the section <a href="week-1-introduction-to-r-studio.html#getting_started">Getting started with R Studio</a></p>
+<p>Once you have accessed R Studio (and ideally setup your H drive), download the data file for this week, which is called <a href="files/Week_2/penelope.csv">penelope.csv</a>, and the accompanying <a href="files/Week_2/PSYC121_week_2_script.R">R script</a> which we will use later.</p>
+<div id="how-much-does-the-cow-weigh-task-1" class="section level3" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> How much does the cow weigh? (Task 1)</h3>
+<p>Some 5 years ago, a large group of participants gave an estimate of the weight of Penelope the cow. Just over 17,000 guesses. And the distribution of guesses was something like this:
+<img src="files/Week_2/cow_weight.png" />
+What we can see from this graph is that:</p>
 <ol style="list-style-type: decimal">
-<li><p>Add a line <code>library(pwr)</code> and run this</p></li>
-<li><p>add the line <code>pwr.t.test(d = .5, n = 100)</code> and run this.</p></li>
-<li><p>What is the reported power value and what does this mean?</p></li>
-<li><p>If you want to achieve 99% power to see an effect of .3, what sample size do you need?</p></li>
-<li><p>With a sample size of 60 and power of 80%, what minimum effect size would we be able to detect?</p></li>
+<li>Guesses formed a roughly normal distribution. There is a bit of a skew with a right0hand tail, but this is inevitable as a weight of less than 0 is physically impossible, but there is no limit of the semantics of a large guess.</li>
+<li>The mean guess weight (1,287 lbs) is very close to the actual (true) weight of the cow (1,355 lbs). So even though lots of people were inaccurate, a central tendency measure has a pretty good alignment with te true weight. This is known as the Wisdom of Crowds phenomenon, first identified by Galton in 1907 (though he suggested using the median weight)</li>
 </ol>
+<p>Let’s look at the PSYC121 student data collected on guessing the weight of Penelope, and ask whether it resembles the properties of this large dataset.</p>
 </div>
+<div id="finding-the-correct-folder" class="section level3" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Finding the correct folder</h3>
+<p>…we need something here about navigating to the folder and setting the working directory</p>
 </div>
-<div id="lab-task-1-online-tutorials-2" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> LAB TASK 1: Online tutorials</h2>
-<p>Task 1 of this lab will use an online tutorial.
-To access the tutorial click here: <a href="https://psylancs.shinyapps.io/Week_9_learnr/" class="uri">https://psylancs.shinyapps.io/Week_9_learnr/</a> (not available until Monday morning)</p>
+<div id="using-the-r-script" class="section level3" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Using the R script</h3>
+<p>Let’s start working with our data, by opening up the “PSYC121_week_2_script.R” file. This is “an R script” that contains a series of commands. We could type each of these in the console window (like we did in Week 1), but by having them in a script like this, it saves us typing them or copying and pasting them into the console. It also means we have a record of all the commands we have run.</p>
+<p>The first command is loads a library of functions:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="week-2-descriptive-statistics.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<p>To run this, simply click anywhere on line 1 to put the cursor there, and press ctrl+enter (cmd+enter on a mac) or click the button called run. You will see a number of messages appear in the console. Don’t worry about these, or worry too much about what exactly this command is doing. Essentially this is giving us some useful tools for our analysis. We will introduce the features of the <strong>tidyverse</strong> gradually during this course.</p>
+<p>Let’s now get our “weight guessing data” into RStudio. After we have loaded the tidyverse library, we can then use the <code>read_csv()</code> command to read in the dataset:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="week-2-descriptive-statistics.html#cb8-1" aria-hidden="true" tabindex="-1"></a>penelope <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;penelope.csv&quot;</span>)</span></code></pre></div>
+<p>Have a quick look at the data you have just imported / loaded. To do so, at the command line just write</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="week-2-descriptive-statistics.html#cb9-1" aria-hidden="true" tabindex="-1"></a>penelope</span></code></pre></div>
+<p>and the data will be reported. Note that “NA” means not available or missing data. Does this file structure make some sense to you?</p>
 </div>
-<div id="lab-task-2" class="section level2" number="7.3">
-<h2><span class="header-section-number">7.3</span> LAB TASK 2:</h2>
-<p>In this task we will look at the data for UK median salary estimates, and focus first on exploring the sample in order to identify and potentially remove any unusual data.</p>
+<div id="finding-the-mean-and-median-estimates" class="section level3" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> Finding the mean and median estimates</h3>
+<p>Use the data to answer the following questions…</p>
 <ol style="list-style-type: decimal">
-<li><p>Open the script “Week_9_Tasks.R” (see prep work)</p></li>
-<li><p>Run the first two lines of code <code>library(tidyverse)</code> and <code>data &lt;- read_csv("gamble_salary.csv")</code></p></li>
-<li><p>Add a <code>geom_boxplot()</code> to the <code>ggplot()</code> command to draw a box and whiskers plot, mapping the variable <em>salary_estimate</em> to either the x OR y axis. Note the outliers that are shown - we will now try to identify these data points and remove them.</p></li>
-<li><p>Add a new column (<code>mutate()</code>) to the data set, which uses the scale function to transform the salary estimates into z-scores.</p></li>
-<li><p>Complete the <code>arrange(desc())</code> to have the data sorted by the z-score column (use whatever name you made that column in the mutate command). Use <code>view(data)</code> to view the data set and get a sense of the data.</p></li>
+<li>What is the mean weight estimates?</li>
+<li>What is the standard deviation of the estimates?</li>
+<li>What range of estimates encompasses 2 standard deviations around the mean?</li>
+<li>What is the median weight of the estimates?</li>
+<li>Which of these central tendency measures is the more accurate measure of the true cow weight?</li>
+<li>What is the mean weight estimate (and standard deviation) for female respondents and non-female (male and non-binary) respondents?</li>
 </ol>
-<p>Now that we have the salary estimates recoded as z-scores, we can think about what we might consider an extreme data point. If we remove z scores that are &gt;2 and &lt;-2 we will be removing ~5% of the extreme values.</p>
-<p><img src="%22z_score_figure.png%22" /></p>
-<ol start="6" style="list-style-type: decimal">
-<li><p>Let’s take a look at how many results have these extreme z values in our sample. Complete the two filter commands, one to see how many results give <strong>z-scores over 2</strong>, and one to see how many results give <strong>z-scores under -2</strong>. You should see 6 at the high end, and 11 at the low end.</p></li>
-<li><p>Once you are happy with how the filters are working, use a filter command to <strong>remove</strong> these outliers from the data.</p></li>
-</ol>
-<p>We will look at the salary estimates, as a function of whether respondants were “risk-seeking” or more “risk-averse”. You may remember that you were asked the following question:</p>
-<p><strong>Imagine you are on a game-show and you win £300. The presenter gives you have a choice: receive an additional £100 for sure, or take a gamble offering a 50% chance to gain £200 and a 50% chance to gain nothing. Which would you choose?</strong></p>
-<p>The classic finding is that around 80% of people play it safe and don’t gamble. Whether people in our sample chose to gamble or not, is coded in the column “gamble_gain” (TRUE = gamble, FALSE = don’t gamble).</p>
-<ol start="8" style="list-style-type: decimal">
-<li><p>Complete the group_by and summarise commands to assess whether the mean salary estimates differed between people who were risk-takers and those who were more risk-averse. Note that the summarise command includes a calculation of N, showing the number of each response: did our sample fit the original finding of ~80% people playing it safe?</p></li>
-<li><p>Run a unrelated (paired = FALSE) t-test on the data to see if people who are more risk averse or risk-seeking give different salary estimates.</p></li>
-</ol>
-<p>For those interested in the gambling variable, note that we asked a second version of the same scenario:</p>
-<p><strong>Imagine you are on a different game-show and you win £500. Here you are given a choice between either losing £100 from your winnings for sure, or taking a gamble offering a 50% chance to lose nothing and a 50% chance to lose £200. Which would you choose?</strong></p>
-<ol start="10" style="list-style-type: decimal">
-<li><p>When phrased as a loss, more people tend to gamble. Did our sample show this result? Were the salary estimates of people who were willing to gamble under this scenario different to those not willing to gamble?</p></li>
-<li><p>Use the same formula you used in the t-statistic in the calculation of Cohen’s d. What is the effect size?</p></li>
-<li><p>Work out what our final sample size was in the data after we conducted the filtering (hint: look in the environment). Use this to conduct a power analysis to see what effect size we could have seen with a power of 80%.</p></li>
-</ol>
+<p>You may be thinking, how do I possibly do any of this?! Well this week all the commands you need are contained in the R script you have downloaded. Also, remember from last week, we explored the R command:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="week-2-descriptive-statistics.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(lecture1_data)</span></code></pre></div>
+<p>That gave us the mean of the small dataset “lecture1_data”. This time, we want to explore the Penelope dataset. But also, the lecture_data was just a single list of numbers. The Penelope file is more like a datasheet. So we need to tell RStudio which <strong>column</strong> we are interested in. RStudio uses the format <strong>data$column</strong>. Hence, we can ask</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="week-2-descriptive-statistics.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(penelope<span class="sc">$</span>estimate) </span></code></pre></div>
+<p>and to get a standard deviation we can use the command:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="week-2-descriptive-statistics.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(penelope<span class="sc">$</span>estimate)</span></code></pre></div>
+<p>So from this, can you work out what you would do to get the median value (remember from last week how we got the median value?). Add this command to your script, run it to get the median value, and save the file.</p>
 </div>
-<div id="the-t-test-table-criterion-values-of-t-2" class="section level2" number="7.4">
-<h2><span class="header-section-number">7.4</span> The t-test table (criterion values of t)</h2>
-<p><img src="%22ttable.png%22" style="height:75.0%" /></p>
+<div id="referencing-columns" class="section level3" number="3.2.5">
+<h3><span class="header-section-number">3.2.5</span> Referencing columns</h3>
+<p>We have seen that:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="week-2-descriptive-statistics.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(penelope<span class="sc">$</span>estimate) </span></code></pre></div>
+<p>will provide a mean of the column “estimate”. In the third column, named “fweight”, we have the estimates of just the female respondents. In the fourth column, named “oweight”, we have the estimates of the “other” respondents (males and non-binary).</p>
+<p>So can you now figure out how you might get information about the other columns, such as the female data (only) or the non-female data? Try it, based on what you have just done. Does it work?</p>
+<p>You will find that the result of the this command produces an “NA” result. This means that the answer is “Not Available”, or in other words, is a “missing value”. This is because some of the values in this column are NA, and the mean of a column with NAs will always lead to the result NA.</p>
+<p>Instead, try this command:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="week-2-descriptive-statistics.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(penelope<span class="sc">$</span>fweight, <span class="at">na.rm =</span> <span class="cn">TRUE</span> )</span></code></pre></div>
+<p>Any different? The <code>na.rm = TRUE</code> instruction tells RStudio that missing data can be ignored in this mean calculation. (in technical language, <code>na.rm</code> is a parameter of the function <code>mean</code> that removes the NAs if set to TRUE)</p>
+</div>
+<div id="evaluating-the-range-of-estimates" class="section level3" number="3.2.6">
+<h3><span class="header-section-number">3.2.6</span> evaluating the range of estimates</h3>
+<p>mean +/- 2 SDs exercise…</p>
+<p>JOHN - this probably needs a bit more intro here - asking a bit too much at this stage?
+Q3 and Q5 above ask you to think about and process what R Studio tells you from the other commands you are using. The information comes from elsewhere in the activities you have done</p>
+</div>
+<div id="simple-graphs" class="section level3" number="3.2.7">
+<h3><span class="header-section-number">3.2.7</span> simple graphs</h3>
+<p>RStudio can be used to create graphical data plots that can help interpret datasets</p>
+<p>The first thing we can do is create a histogram distribution of guesses from the sample student data to compare with the previous large sample study (i.e. the 17,000 guesses):</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="week-2-descriptive-statistics.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(penelope<span class="sc">$</span>estimate)</span></code></pre></div>
+<p>We can also create a “box and whisker plot”. Here’s a general simple description of a box-and-whisker plot as a graphical representation of data:</p>
+<p><img src="files/Week_2/box_whisker.png" /></p>
+<p>We can create a box and whisker plot for the estimate column using the following command:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="week-2-descriptive-statistics.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(penelope<span class="sc">$</span>estimate)</span></code></pre></div>
 
+</div>
 </div>
 </div>
             </section>
@@ -302,8 +342,8 @@ To access the tutorial click here: <a href="https://psylancs.shinyapps.io/Week_9
           </div>
         </div>
       </div>
-<a href="week-8-psyc121-lab.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="week-1-introduction-to-r-studio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="week5.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

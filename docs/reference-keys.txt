@@ -6,7 +6,7 @@ getting_started
 file-organisation
 lets-do-something
 extra-content
-week-2--
+week-2---descriptive-statistics
 pre-lab-work
 r-studio-tasks
 how-much-does-the-cow-weigh-task-1
