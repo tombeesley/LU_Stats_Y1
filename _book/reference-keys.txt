@@ -1,0 +1,10 @@
+intro
+week5
+pre-lab-work
+online-tutorials
+r-studio-prep-work
+conceptual-prep-work
+lab-work
+r-studio-exercises---music-preferences-task-1
+exploring-binomial-distributions-and-the-sign-test-task-2.
+the-sign-test-table
