@@ -52,4 +52,3 @@ exploring-the-median-salary-estimates
 using-mutate-to-create-a-new-column
 salary-estimates-and-risk-seeking
 unrelated-samples-t-test
-the-t-test-table-criterion-values-of-t

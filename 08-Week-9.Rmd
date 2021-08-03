@@ -95,7 +95,7 @@ For those interested in the gambling variable, note that we asked a second versi
 
 12. Work out what our final sample size was in the data after we conducted the filtering (hint: look in the environment). Use this to conduct a power analysis to see what effect size we could have seen with a power of 80%.
 
-## The t-test table (criterion values of t)
+**The t-test table (criterion values of t)**
 ![](files/Week_9/ttable.png)
 
 
