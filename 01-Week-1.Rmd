@@ -1,4 +1,4 @@
-# Week 1 - Introduction to R Studio
+# Introduction to R Studio (Week 1)
 
 The exercises in this section are designed to familiarise you with working in R Studio.
 

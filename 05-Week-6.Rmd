@@ -1,4 +1,4 @@
-# Week 6 - group_by and summarise {#week5}
+# Grouping and summarising (Week 6) {#week6}
 
 In this week's lab we will be recapping some of the commands you learnt in week 3 - `group_by()` and `summarise()` - and exploring some of the properties of the binomial distribution using the Sign Test. Please ensure you do the pre-lab work before coming to class.
 
@@ -12,8 +12,6 @@ To access the tutorial click here: https://psylancs.shinyapps.io/Week_6_learnr/
 
 ### R Studio prep work
 In preparation for the lab tasks, please do the following things:
-
-[Download the data file here]
 
 1. Download the files [location_music_Wk6.csv](files/Week_6/location_music_Wk6.csv), [Week_6_lab.R](files/Week_6/Week_6_lab.R) and [Week_6_binomial.R](files/Week_6/Week_6_binomial).
 

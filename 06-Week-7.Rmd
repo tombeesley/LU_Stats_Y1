@@ -1,14 +1,18 @@
-# Week 7 - PSYC121 lab
+# Visualisation (Week 7)
 
 They say a picture paints a thousand words, so in this week's lab we will be learning some fundamental skills in **data visualisation** with the `ggplot()` commands.  We will also be looking at how we can run **one-sample t-tests in R** and we will use these to explore the estimates people gave for the median salary in the UK. Please ensure you do the pre-lab work before coming to class.
 
 ## Pre-lab work
 
+### Online tutorial 
+
+[Click here](https://psylancs.shinyapps.io/Week_7_learnr/) to access the online tutorial for this week
+
 ### R Studio prep work
 
 In preparation for Tasks 2 and 3, please do the following things:
 
-1. Download all the files in the Week 7 lab folder on Moodle.
+1. Download the files [data_phone_Wk7.csv](files/Week_7/data_phone_Wk7.csv), [data_salary_Wk7.csv](files/Week_7/data_salary_Wk7.csv), [Week_7_Task_2.R](files/Week_7/Week_7_Task_2.R) and [Week_7_Task_3.R](files/Week_7/Week_7_Task_3.R).
 
 2. Place the files in a suitable folder on the computer.
 
@@ -36,12 +40,10 @@ A researcher conducts an experiment in which they ask a group of ten children ag
 
 7. Can we reject the null-hypothesis?
 
-## LAB TASK 1: Online tutorials 
 
-Task 1 of this lab will use an online tutorial. 
-To access the tutorial click here: https://psylancs.shinyapps.io/Week_7_learnr/
+## Lab Work (R Studio)
 
-## LAB TASK 2: R Studio exercises - visualising phone use
+### Visualising phone use
 
 Now that you have completed the online tutorials on `ggplot()`, it's time to put those skills into practice with a new data set, provided in "data_phone.csv". These data are just the phone time variables (estimated and actual) with the phone type nominal variable.
 
@@ -49,7 +51,12 @@ Follow these steps to visualise these data:
 
 1. Open the script "Week_7_Task_2.R" (see prep work)
 
-2. Run the first two lines of code `library(tidyverse)` and `data <- read_csv("data_phone.csv")`
+2. Run the first two lines of code:
+
+```{r eval=FALSE}
+library(tidyverse)
+data <- read_csv("data_phone.csv")
+```
 
 3. View the data with `view(data)`
 
@@ -64,13 +71,18 @@ Follow these steps to visualise these data:
 8. Change the theme of the graph.
 
 
-## LAB TASK 3: Conducting a one-sample t-test.
+### Conducting a one-sample t-test.
 
 In this task we will run some one-sample t-tests in R to examine people's estimates of UK salaries.
 
 1. Open the "Week_7_Task_3.R" script (see prep work)
 
-2. Run the first two lines of code `library(tidyverse)` and `data <- read_csv("data_salary.csv")`
+2. Run the first two lines of code:
+
+```{r eval=FALSE}
+library(tidyverse) 
+data <- read_csv("data_salary.csv")
+```
 
 3. Run the third command. This runs a t-test on the salary estimates. The two settings (parameters) in the t-test function are *x*, which is the column of data we are interested in testing, and *mu*, which is the value we want to compare against. 
 
@@ -80,8 +92,8 @@ In this task we will run some one-sample t-tests in R to examine people's estima
 
 6. In the same way as for Q6, check the salary ratings for those people whose home location is "Asia" and "Europe (not UK)". Note in each case what the t-test is telling you.
 
-## The t-test table (criterion values of t)
-![]("ttable.png")
+**The t-test table (criterion values of t)**
+![](files/Week_7/ttable.png)
 
 
 

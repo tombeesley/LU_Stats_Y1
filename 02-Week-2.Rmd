@@ -1,4 +1,4 @@
-# Week 2 - Descriptive statistics
+# Descriptive statistics (Week 2)
 
 ## Pre-lab work
 
@@ -12,7 +12,8 @@ Much of what a psychologist does involves numbers. For example, we:
 It should be obvious from the above that we need detailed information about what numbers mean, how to collect numbers, how to treat numbers and how to analyse numbers. In this lab we will start you along this journey. Let's start by recapping some important concepts from last week:
 
 1. List the 4 types of measurement scales and for each give an example of how they might be used in psychology. 
-2.For each of the types of numbers below give the scale of measurement, justifying your answer. 
+
+2. For each of the types of numbers below give the scale of measurement, justifying your answer. 
   +  Temperature in centigrade 
   +  The number of children who point at a visual stimulus
   +  The number of errors made by each participant in a word reading task
