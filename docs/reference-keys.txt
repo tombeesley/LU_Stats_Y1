@@ -42,10 +42,14 @@ lab-work-r-studio-1
 exploring-the-stroop-task
 analysing-the-data
 testing-if-the-differences-are-real.
-week-9---psyc121-lab
+filtering-outlier-values-week-9
 pre-lab-work-4
+online-tutorial-2
 r-studio-prep-work-3
 conceptual-prep-work-3
-lab-task-1-online-tutorials
-lab-task-2
+lab-work-r-studio-2
+exploring-the-median-salary-estimates
+using-mutate-to-create-a-new-column
+salary-estimates-and-risk-seeking
+unrelated-samples-t-test
 the-t-test-table-criterion-values-of-t
