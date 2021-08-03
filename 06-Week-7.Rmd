@@ -1,4 +1,4 @@
-# Visualisation (Week 7)
+# Visualisation I (Week 7)
 
 They say a picture paints a thousand words, so in this week's lab we will be learning some fundamental skills in **data visualisation** with the `ggplot()` commands.  We will also be looking at how we can run **one-sample t-tests in R** and we will use these to explore the estimates people gave for the median salary in the UK. Please ensure you do the pre-lab work before coming to class.
 
@@ -10,7 +10,7 @@ They say a picture paints a thousand words, so in this week's lab we will be lea
 
 ### R Studio prep work
 
-In preparation for Tasks 2 and 3, please do the following things:
+In preparation for the lab tasks, please do the following things:
 
 1. Download the files [data_phone_Wk7.csv](files/Week_7/data_phone_Wk7.csv), [data_salary_Wk7.csv](files/Week_7/data_salary_Wk7.csv), [Week_7_Task_2.R](files/Week_7/Week_7_Task_2.R) and [Week_7_Task_3.R](files/Week_7/Week_7_Task_3.R).
 

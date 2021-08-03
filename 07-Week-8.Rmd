@@ -1,14 +1,18 @@
-# Week 8 - PSYC121 lab
+# Visualisation II (Week 8)
 
 Today we will continue to develop our skills in **data visualisation** with the `ggplot()` commands.  We will look at plotting means and standard errors, and at how geoms can share aesthetic mappings. We will explore our data on the famous "Stroop Task" and calculate 
 
 ## Pre-lab work
 
+### Online tutorial 
+
+[Click here](https://psylancs.shinyapps.io/Week_8_learnr/) to access the online tutorial for this week
+
 ### R Studio prep work
 
-If you feel it may be useful, **you can work through Task 1 before the lab class**. In preparation for Tasks 2 and 3, please do the following things:
+In preparation for the lab tasks, please do the following things:
 
-1. Download all the files in the Week 8 lab folder on Moodle.
+1. Download the files [data_stroop_Wk8.csv](files/Week_8/data_stroop_Wk8.csv), and [Week_8_Tasks.R](files/Week_8/Week_8_Tasks.R)
 
 2. Place the files in a suitable folder on the computer.
 
@@ -38,26 +42,30 @@ A researcher wants to replicate a published finding that submerging your arm int
 
 8. Is this a directional hypothesis? And what does that mean for our criterion value?
 
-## LAB TASK 1: Online tutorials 
+## Lab Work (R Studio)
 
-Task 1 of this lab will use an online tutorial. 
-To access the tutorial click here: https://psylancs.shinyapps.io/Week_8_learnr/
-
-## LAB TASK 2: Exploring the Stroop effect
+### Exploring the stroop task
 
 The "Stroop Effect" is a classic demonstration of automaticity of behaviour. Participants have to say the colour a word is printed in, which is an easy task for a "compatible" stimulus like \textcolor{green}{GREEN}, and a much more difficult task for an "incompatible" stimulus like \textcolor{red}{BLUE}. We can't help but read the text - it has seemingly become an automatic process.
 
-![]("stroop.png"){width=50%}
+![](files/Week_8/stroop.png)
 
 In this task we will calculate the means and standard errors of the means. We will then plot them using ggplot(). 
 
 1. Open the script "Week_8_Tasks.R" (see prep work)
 
-2. Run the first two lines of code `library(tidyverse)` and `data <- read_csv("data_stroop.csv")`
+2. Run the first two lines of code:
+
+```{r eval = FALSE}
+library(tidyverse)
+data <- read_csv("data_stroop.csv")
+```
 
 3. View the data with `view(data)`. You will see that the data are a little different from the data we have worked with previously. We have an ID variable, which gives a unique number for each person. Each person has 3 rows. This is because the different conditions of the stroop task is a *within-subjects* variable. For data like this it is often useful to have them arranged in what is referred to as "long format", with multiple rows for each response the participant provided. For the current data that means we have a variable called *stroop_condition*, which is our IV, and one called *stroop_time* which is our DV. 
 
-4. Return to the Week_8_Tasks.R script. You will see we have provided you with the "scaffold" of a complete analysis process for the Stroop data. The raw data will be grouped and then summarised as means and SEs, and then plotted with columns and error bars. This is very similar to the commands used at the end of the learnr tutorial, and you can refer to that analysis if you get stuck here. **Your job is to carefully work through the code and fill in the parts that are marked MISSING**. By the end, you should have a graph with 3 columns, with the standard error of the means plotted on top.
+### Analysing the data
+
+4. Return to the Week_8_Tasks.R script. You will see we have provided you with the "scaffold" of a complete analysis process for the Stroop data. The raw data will be grouped and then summarised as means and SEs, and then plotted with columns and error bars. This is very similar to the commands used at the end of the **learnr tutorial**, and you can refer to that analysis if you get stuck here. **Your job is to carefully work through the code and fill in the parts that are marked MISSING**. By the end, you should have a graph with 3 columns, with the standard error of the means plotted on top.
 
 5. Add a `labs()` layer to the plot to change the axis titles, and the title of the plot.
 
@@ -67,10 +75,10 @@ In this task we will calculate the means and standard errors of the means. We wi
 
 8. Manually change the colours of the columns with (e.g.) `scale_fill_manual(values = c("darkgreen", "darkblue", "darkred"))`. Open the RColor.pdf in the Week 8 files for more colours than you'll probably ever want!
 
-9. Click Export->Save as Image. Then show it off to the world (i.e., the Teams channel)
+9. Click "Export" -> "Save as Image". 
 
 
-## LAB TASK 3: Testing if the differences are real.
+### Testing if the differences are real.
 
 To test whether people performed differently in the different Stroop conditions, we can run a series of *related samples t-tests*. We will use a slightly modified version of our command for conducting the one-sample t-test in Week 7. First though, we must use a `filter()` to restrict the data to just two conditions on the *stroop_condition* variable. This is because a related samples t-test looks at the difference between two means (and only two), so the column we use needs to have just two levels.
 
@@ -82,8 +90,8 @@ To test whether people performed differently in the different Stroop conditions,
 
 4. With 3 levels to the variable *stroop_condition* there are 3 possible comparisons we can make. Complete these by copying and pasting the commands, editing each to make a different filter selection, and then run the t-test. Make sure you interpret the results of the t-tests.
 
-## The t-test table (criterion values of t)
-![]("ttable.png")
+**The t-test table (criterion values of t)**
+![](files/Week_8/ttable.png)
 
 
 
