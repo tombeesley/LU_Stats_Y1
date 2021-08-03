@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6 Week 8 - PSYC121 lab | Statistics for Psychologists</title>
+  <title>4 Grouping and summarising (Week 6) | Statistics for Psychologists</title>
   <meta name="description" content="Course content for PSYC121 and PSYC122 at Lancaster University" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6 Week 8 - PSYC121 lab | Statistics for Psychologists" />
+  <meta property="og:title" content="4 Grouping and summarising (Week 6) | Statistics for Psychologists" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="tombeesley/LU_PSYC121_122" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6 Week 8 - PSYC121 lab | Statistics for Psychologists" />
+  <meta name="twitter:title" content="4 Grouping and summarising (Week 6) | Statistics for Psychologists" />
   
   <meta name="twitter:description" content="Course content for PSYC121 and PSYC122 at Lancaster University" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="visualisation-week-7.html"/>
-<link rel="next" href="week-9-psyc121-lab.html"/>
+<link rel="prev" href="descriptive-statistics-week-2.html"/>
+<link rel="next" href="visualisation-week-7.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -228,73 +228,163 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-8---psyc121-lab" class="section level1" number="6">
-<h1><span class="header-section-number">6</span> Week 8 - PSYC121 lab</h1>
-<p>Today we will continue to develop our skills in <strong>data visualisation</strong> with the <code>ggplot()</code> commands. We will look at plotting means and standard errors, and at how geoms can share aesthetic mappings. We will explore our data on the famous “Stroop Task” and calculate</p>
-<div id="pre-lab-work-3" class="section level2" number="6.1">
-<h2><span class="header-section-number">6.1</span> Pre-lab work</h2>
-<div id="r-studio-prep-work-2" class="section level3" number="6.1.1">
-<h3><span class="header-section-number">6.1.1</span> R Studio prep work</h3>
-<p>If you feel it may be useful, <strong>you can work through Task 1 before the lab class</strong>. In preparation for Tasks 2 and 3, please do the following things:</p>
+<div id="week6" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Grouping and summarising (Week 6)</h1>
+<p>In this week’s lab we will be recapping some of the commands you learnt in week 3 - <code>group_by()</code> and <code>summarise()</code> - and exploring some of the properties of the binomial distribution using the Sign Test. Please ensure you do the pre-lab work before coming to class.</p>
+<div id="pre-lab-work-1" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Pre-lab work</h2>
+<div id="online-tutorials" class="section level3" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Online tutorials</h3>
+<p>Complete the online tutorial for working with these commands. These tutorials use a web-based version of R that will allow you to enter commands, and also get hints and solutions to the problems. Once you’ve completed the tutorial, you can put what you’ve learnt in to practice in R Studio using the lab tasks below.</p>
+<p>To access the tutorial click here: <a href="https://psylancs.shinyapps.io/Week_6_learnr/" class="uri">https://psylancs.shinyapps.io/Week_6_learnr/</a></p>
+</div>
+<div id="r-studio-prep-work" class="section level3" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> R Studio prep work</h3>
+<p>In preparation for the lab tasks, please do the following things:</p>
 <ol style="list-style-type: decimal">
-<li><p>Download all the files in the Week 8 lab folder on Moodle.</p></li>
-<li><p>Place the files in a suitable folder on the computer.</p></li>
-<li><p>Within R Studio, navigate to that folder in the “Files” pane and click OPEN (note the files are not shown in the folder)</p></li>
+<li><p>Download the files <a href="files/Week_6/location_music_Wk6.csv">location_music_Wk6.csv</a>, <a href="files/Week_6/Week_6_lab.R">Week_6_lab.R</a> and <a href="files/Week_6/Week_6_binomial">Week_6_binomial.R</a>.</p></li>
+<li><p>Place these files in a suitable folder on the computer.</p></li>
+<li><p>Within R Studio, navigate to that folder in the “Files” pane.</p></li>
 <li><p>Select the “More” button and then “Set as Working Directory”</p></li>
-<li><p>Optional - create a new project in this folder (“File”, “New Project”, “Existing Directory”)</p></li>
+<li><p>Recommended - create a new project in this folder (“File”, “New Project”, “Existing Directory”)</p></li>
 </ol>
 </div>
-<div id="conceptual-prep-work-2" class="section level3" number="6.1.2">
-<h3><span class="header-section-number">6.1.2</span> Conceptual prep work</h3>
-<p>A researcher wants to replicate a published finding that submerging your arm into freezing cold water for 60 seconds impaires your ability to memorise lists of words. They have 15 people complete the memory test before and after submerging their arm. The mean score before is 17 items correct, and the mean score after is 12 items correct. The SD of the difference scores is 9.</p>
+<div id="conceptual-prep-work" class="section level3" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> Conceptual prep work</h3>
+<p>A researcher conducts an experiment to find out if an anti-smoking advert changes the amount people smoke. He has people record the number of cigarettes they smoke for a week before watching the advert, and then for a week after watching the advert. The data are shown below:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Participant</th>
+<th>Before watching the advert</th>
+<th>After watching the advert</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>25</td>
+<td>31</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>10</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>8</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>35</td>
+<td>25</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>48</td>
+<td>44</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>21</td>
+<td>26</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>29</td>
+<td>30</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>17</td>
+<td>11</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>26</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>41</td>
+<td>38</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>44</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>73</td>
+<td>56</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>4</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>8</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>33</td>
+<td>24</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>22</td>
+<td>27</td>
+</tr>
+</tbody>
+</table>
 <ol style="list-style-type: decimal">
-<li><p>What is the null hypothesis?</p></li>
-<li><p>What is the mean difference score?</p></li>
-<li><p>What is the SE of the difference scores?</p></li>
-<li><p>What is the t value?</p></li>
-<li><p>What are the degrees of freedom?</p></li>
-<li><p>What is the criterion value for t? (see table below)</p></li>
-<li><p>Is our t value significant?</p></li>
-<li><p>Is this a directional hypothesis? And what does that mean for our criterion value?</p></li>
+<li><p>How many positive, negative, and zero differences are there?</p></li>
+<li><p>What is the sample size that is applicable for the Sign Test?</p></li>
+<li><p>What is the critical value in the Sign Test table?</p></li>
+<li><p>What is the null-hypothesis?</p></li>
+<li><p>Can we reject the null-hypothesis?</p></li>
 </ol>
 </div>
 </div>
-<div id="lab-task-1-online-tutorials" class="section level2" number="6.2">
-<h2><span class="header-section-number">6.2</span> LAB TASK 1: Online tutorials</h2>
-<p>Task 1 of this lab will use an online tutorial.
-To access the tutorial click here: <a href="https://psylancs.shinyapps.io/Week_8_learnr/" class="uri">https://psylancs.shinyapps.io/Week_8_learnr/</a></p>
-</div>
-<div id="lab-task-2-exploring-the-stroop-effect" class="section level2" number="6.3">
-<h2><span class="header-section-number">6.3</span> LAB TASK 2: Exploring the Stroop effect</h2>
-<p>The “Stroop Effect” is a classic demonstration of automaticity of behaviour. Participants have to say the colour a word is printed in, which is an easy task for a “compatible” stimulus like , and a much more difficult task for an “incompatible” stimulus like . We can’t help but read the text - it has seemingly become an automatic process.</p>
-<p><img src="%22stroop.png%22" style="width:50.0%" /></p>
-<p>In this task we will calculate the means and standard errors of the means. We will then plot them using ggplot().</p>
+<div id="lab-work-1" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Lab Work</h2>
+<div id="r-studio-exercises---music-preferences-task-1" class="section level3" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> R Studio exercises - music preferences (Task 1)</h3>
+<p>Now that you have completed the online tutorials on <code>group_by()</code> and <code>summarise()</code>, it’s time to put those skills into practice with a new dataset. Open the “Week_6_lab.R” script (as detailed in the pre-lab work). This will load the tidyverse packages and read in the data. The data consist of the ratings you gave for 8 different musicians, from a score of 1 (Don’t like them) through to 5 (Love them!). People could give “no opinion”, which are coded as NA. So be sure to use <code>na.rm = TRUE</code> when computing your summary statistics.</p>
+<p>Follow these steps to explore this dataset:</p>
 <ol style="list-style-type: decimal">
-<li><p>Open the script “Week_8_Tasks.R” (see prep work)</p></li>
-<li><p>Run the first two lines of code <code>library(tidyverse)</code> and <code>data &lt;- read_csv("data_stroop.csv")</code></p></li>
-<li><p>View the data with <code>view(data)</code>. You will see that the data are a little different from the data we have worked with previously. We have an ID variable, which gives a unique number for each person. Each person has 3 rows. This is because the different conditions of the stroop task is a <em>within-subjects</em> variable. For data like this it is often useful to have them arranged in what is referred to as “long format”, with multiple rows for each response the participant provided. For the current data that means we have a variable called <em>stroop_condition</em>, which is our IV, and one called <em>stroop_time</em> which is our DV.</p></li>
-<li><p>Return to the Week_8_Tasks.R script. You will see we have provided you with the “scaffold” of a complete analysis process for the Stroop data. The raw data will be grouped and then summarised as means and SEs, and then plotted with columns and error bars. This is very similar to the commands used at the end of the learnr tutorial, and you can refer to that analysis if you get stuck here. <strong>Your job is to carefully work through the code and fill in the parts that are marked MISSING</strong>. By the end, you should have a graph with 3 columns, with the standard error of the means plotted on top.</p></li>
-<li><p>Add a <code>labs()</code> layer to the plot to change the axis titles, and the title of the plot.</p></li>
-<li><p>Change the theme of the plot</p></li>
-<li><p>Map the fill aesthetic to the variable <em>stroop_condition</em></p></li>
-<li><p>Manually change the colours of the columns with (e.g.) <code>scale_fill_manual(values = c("darkgreen", "darkblue", "darkred"))</code>. Open the RColor.pdf in the Week 8 files for more colours than you’ll probably ever want!</p></li>
-<li><p>Click Export-&gt;Save as Image. Then show it off to the world (i.e., the Teams channel)</p></li>
+<li>Run the two lines of codes <code>library(tidyverse)</code> and <code>data &lt;- read_csv("location_music.csv")</code></li>
+<li>Use <code>summary()</code> to get an overview of the data</li>
+<li>View the responses to nominal variables with <code>count()</code></li>
+<li>For an artist of your choice, calculate the mean and SD of their ratings.</li>
+<li>Use <code>group_by()</code> and <code>summarise()</code> to see whether people’s home location changes their ratings for an artist of your choice.</li>
+<li>What about conversation skills? Are those who think they have poor conversation skills more likely to prefer rock or pop music?</li>
 </ol>
 </div>
-<div id="lab-task-3-testing-if-the-differences-are-real." class="section level2" number="6.4">
-<h2><span class="header-section-number">6.4</span> LAB TASK 3: Testing if the differences are real.</h2>
-<p>To test whether people performed differently in the different Stroop conditions, we can run a series of <em>related samples t-tests</em>. We will use a slightly modified version of our command for conducting the one-sample t-test in Week 7. First though, we must use a <code>filter()</code> to restrict the data to just two conditions on the <em>stroop_condition</em> variable. This is because a related samples t-test looks at the difference between two means (and only two), so the column we use needs to have just two levels.</p>
+<div id="exploring-binomial-distributions-and-the-sign-test-task-2." class="section level3" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> Exploring binomial distributions and the sign test (Task 2).</h3>
+<p>Download the “Week_6_binomial.R” script from the Moodle forum. This is a version of the “binomial program” that Tom used in his lecture this week. It allows you to set the size of the sample <code>e</code>, and generate the binomial probabilities of different results for that sample size. It then plots those probabilities as a column graph using <code>geom_col()</code>. The red line shows the “significance level” and allows you to see which events are “unusual” given the null hypothesis for the given sample size (i.e., which bars are below this line) and for a specified Type 1 error rate (alpha). The probabilities for the different results are also presented in blue.</p>
 <ol style="list-style-type: decimal">
-<li><p>Continue working with the “Week_8_Tasks.R” script</p></li>
-<li><p>Use the filter command to restrict the data to two of the conditions. Note that the filter uses an “|” symbol, which means “or”.</p></li>
-<li><p>Run the t-test on this selection of data, to compare the means from these two levels of the IV. Is the result significant? Note the t value and the p value. How would you express this as a statement in a report?</p></li>
-<li><p>With 3 levels to the variable <em>stroop_condition</em> there are 3 possible comparisons we can make. Complete these by copying and pasting the commands, editing each to make a different filter selection, and then run the t-test. Make sure you interpret the results of the t-tests.</p></li>
+<li><p>Would a result of 3 positive and and 13 negative be deemed statistically significant at the 5% level? Use the script to generate this result and compare the graph to the appropriate number in the Sign Test table below.</p></li>
+<li><p>Would the result be significant at the 1% level?</p></li>
+<li><p>What does this tell you about setting the Type 1 error rate at 1%?</p></li>
+<li><p>With a sample size of 12, use the Sign Test table below to note how many positive or negative results would be deemed “unusual” under the null hypothesis, at the 5%?</p></li>
+<li><p>Run a sample of 12 in the script to check and compare your answer to 4.</p></li>
+<li><p>For a sample of 8, what significance level (Type 1 error rate; alpha) would we need to set for a result of 2 out of 8 to be deemed statistically significant?</p></li>
+<li><p>Why might this be a poor criterion for our Type 1 error rate?</p></li>
 </ol>
 </div>
-<div id="the-t-test-table-criterion-values-of-t" class="section level2" number="6.5">
-<h2><span class="header-section-number">6.5</span> The t-test table (criterion values of t)</h2>
-<p><img src="%22ttable.png%22" /></p>
+<div id="the-sign-test-table" class="section level3" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> The Sign Test table</h3>
+<p><img src="files/Week_6/sign_test_table.png" /></p>
 
+</div>
 </div>
 </div>
             </section>
@@ -302,8 +392,8 @@ To access the tutorial click here: <a href="https://psylancs.shinyapps.io/Week_8
           </div>
         </div>
       </div>
-<a href="visualisation-week-7.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="week-9-psyc121-lab.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="descriptive-statistics-week-2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="visualisation-week-7.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
