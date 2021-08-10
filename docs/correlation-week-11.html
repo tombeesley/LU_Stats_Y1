@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Descriptive statistics (Week 2) | Statistics for Psychologists</title>
+  <title>8 Correlation (Week 11) | Statistics for Psychologists</title>
   <meta name="description" content="Course content for PSYC121 and PSYC122 at Lancaster University" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Descriptive statistics (Week 2) | Statistics for Psychologists" />
+  <meta property="og:title" content="8 Correlation (Week 11) | Statistics for Psychologists" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="tombeesley/LU_PSYC121_122" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Descriptive statistics (Week 2) | Statistics for Psychologists" />
+  <meta name="twitter:title" content="8 Correlation (Week 11) | Statistics for Psychologists" />
   
   <meta name="twitter:description" content="Course content for PSYC121 and PSYC122 at Lancaster University" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introduction-to-r-studio-week-1.html"/>
-<link rel="next" href="week6.html"/>
+<link rel="prev" href="filtering-outlier-values-week-9.html"/>
+
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -250,113 +250,101 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="descriptive-statistics-week-2" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> Descriptive statistics (Week 2)</h1>
-<div id="pre-lab-work" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Pre-lab work</h2>
-<p>Much of what a psychologist does involves numbers. For example, we:</p>
-<ul>
-<li>Measure behaviour in terms of numbers</li>
-<li>Use these numbers to provide summaries that indicate similarities and differences between different conditions (e.g., collections of male and female data used to examine gender differences).</li>
-<li>Analyse the raw data or the summaries to determine if there are “real” differences between our experimental conditions.</li>
-<li>Interpret the final numbers from an analysis in order to extract the underlying psychological differences.</li>
-</ul>
-<p>It should be obvious from the above that we need detailed information about what numbers mean, how to collect numbers, how to treat numbers and how to analyse numbers. In this lab we will start you along this journey. Let’s start by recapping some important concepts from last week:</p>
+<div id="correlation-week-11" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> Correlation (Week 11)</h1>
+<div id="pre-lab-work-5" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Pre-lab work</h2>
+<div id="online-tutorial-3" class="section level3" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> Online tutorial</h3>
+</div>
+<div id="r-studio-prep-work-4" class="section level3" number="8.1.2">
+<h3><span class="header-section-number">8.1.2</span> R Studio prep work</h3>
+<p>Download the file <a href="files/Week_11/MillerHadenData.csv">MillerHadenData.csv</a>, and <a href="files/Week_11/122_wk11_labActivity.R">122_wk11_labActivity.R</a></p>
+</div>
+<div id="conceptual-prep-work-4" class="section level3" number="8.1.3">
+<h3><span class="header-section-number">8.1.3</span> Conceptual prep work</h3>
+<p><a href="https://www.rossmanchance.com/applets/GuessCorrelation.html">Click here for a basic web app</a> that will test how good you are at recognising different correlation strengths from the scatterplots. We would recommend you click the “Track Performance” tab so you can keep an overview of your overall bias to underestimate or overestimate a correlation.</p>
+<p>Is this all just a bit of fun? Well, yes, because stats is actually fun! But also no, because it serves a purpose of helping you determine if the correlations you see in your own data are real, and
+to help you see if correlations in published research match with what you are being told. As you will have seen from the above examples, one data point can lead to a misleading relationship and even what might be considered a medium to strong relationship may actually have only limited relevance in the real world.</p>
+</div>
+</div>
+<div id="lab-activities" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Lab activities</h2>
+<p>In this lab, you’ll gain understanding of and practice with:
+• constructing and interpreting scatterplots
+• running correlation analysis and interpret the results
+• reporting the results in APA format
+• constructing a correlation matrix in APA format
+• when and why to apply correlation analysis to answers questions in psychological
+science</p>
+<div id="interpreting-correlation" class="section level3" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Interpreting correlation</h3>
 <ol style="list-style-type: decimal">
-<li><p>List the 4 types of measurement scales and for each give an example of how they might be used in psychology.</p></li>
-<li><p>For each of the types of numbers below give the scale of measurement, justifying your answer.</p></li>
+<li>Below are scatterplots that show the relationship between ‘how much you know about
+correlation and how attractive you appear to members of the opposite (&amp;/or same) sex’.</li>
 </ol>
-<ul>
-<li>Temperature in centigrade</li>
-<li>The number of children who point at a visual stimulus</li>
-<li>The number of errors made by each participant in a word reading task</li>
-<li>The rank attractiveness of each of 10 faces</li>
-<li>The time it takes to process read sentences</li>
-</ul>
-<ol start="3" style="list-style-type: decimal">
-<li><ul>
-<li>What is the name given to a bell-shaped distribution?</li>
-<li>A distribution that is asymmetrical with a long tail that extends towards high numbers is called a ___________________ skewed distribution.</li>
-<li>A distribution with two peaks is called a ____________________ distribution.</li>
-</ul></li>
-</ol>
-</div>
-<div id="r-studio-tasks" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> R Studio tasks</h2>
-<p>For a reminder of how to load R Studio see the section <a href="introduction-to-r-studio-week-1.html#getting_started">Getting started with R Studio</a></p>
-<p>Once you have accessed R Studio (and ideally setup your H drive), download the data file for this week, which is called <a href="files/Week_2/penelope.csv">penelope.csv</a>, and the accompanying <a href="files/Week_2/PSYC121_week_2_script.R">R script</a> which we will use later.</p>
-<div id="how-much-does-the-cow-weigh-task-1" class="section level3" number="3.2.1">
-<h3><span class="header-section-number">3.2.1</span> How much does the cow weigh? (Task 1)</h3>
-<p>Some 5 years ago, a large group of participants gave an estimate of the weight of Penelope the cow. Just over 17,000 guesses. And the distribution of guesses was something like this:
-<img src="files/Week_2/cow_weight.png" />
-What we can see from this graph is that:</p>
+<p><img src="files/Week_11/correlations.png" /></p>
 <ol style="list-style-type: decimal">
-<li>Guesses formed a roughly normal distribution. There is a bit of a skew with a right0hand tail, but this is inevitable as a weight of less than 0 is physically impossible, but there is no limit of the semantics of a large guess.</li>
-<li>The mean guess weight (1,287 lbs) is very close to the actual (true) weight of the cow (1,355 lbs). So even though lots of people were inaccurate, a central tendency measure has a pretty good alignment with te true weight. This is known as the Wisdom of Crowds phenomenon, first identified by Galton in 1907 (though he suggested using the median weight)</li>
+<li><p>Choose the type of correlation (strength and direction) displayed in each graph using
+one of the following:
+• Perfect positive correlation
+• Perfect negative correlation
+• Strong positive correlation
+• Strong negative correlation
+• Moderate positive correlation
+• Moderate negative correlation
+• Null correlation</p></li>
+<li><p>Suppose it was observed that there is a correlation of r = -.81 between a driver’s age and
+the cost of car insurance. This correlation would mean that, in general, older people pay
+more for car insurance.
+TRUE or FALSE?
+Explain why:
+Note: explain your chosen answer based on the statistic given, not why you think the
+correlation may or may not make ‘logical’ sense.</p></li>
 </ol>
-<p>Let’s look at the PSYC121 student data collected on guessing the weight of Penelope, and ask whether it resembles the properties of this large dataset.</p>
 </div>
-<div id="finding-the-correct-folder" class="section level3" number="3.2.2">
-<h3><span class="header-section-number">3.2.2</span> Finding the correct folder</h3>
-<p>…we need something here about navigating to the folder and setting the working directory</p>
-</div>
-<div id="using-the-r-script" class="section level3" number="3.2.3">
-<h3><span class="header-section-number">3.2.3</span> Using the R script</h3>
-<p>Let’s start working with our data, by opening up the “PSYC121_week_2_script.R” file. This is “an R script” that contains a series of commands. We could type each of these in the console window (like we did in Week 1), but by having them in a script like this, it saves us typing them or copying and pasting them into the console. It also means we have a record of all the commands we have run.</p>
-<p>The first command is loads a library of functions:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="descriptive-statistics-week-2.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
-<p>To run this, simply click anywhere on line 1 to put the cursor there, and press ctrl+enter (cmd+enter on a mac) or click the button called run. You will see a number of messages appear in the console. Don’t worry about these, or worry too much about what exactly this command is doing. Essentially this is giving us some useful tools for our analysis. We will introduce the features of the <strong>tidyverse</strong> gradually during this course.</p>
-<p>Let’s now get our “weight guessing data” into RStudio. After we have loaded the tidyverse library, we can then use the <code>read_csv()</code> command to read in the dataset:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="descriptive-statistics-week-2.html#cb8-1" aria-hidden="true" tabindex="-1"></a>penelope <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;penelope.csv&quot;</span>)</span></code></pre></div>
-<p>Have a quick look at the data you have just imported / loaded. To do so, at the command line just write</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="descriptive-statistics-week-2.html#cb9-1" aria-hidden="true" tabindex="-1"></a>penelope</span></code></pre></div>
-<p>and the data will be reported. Note that “NA” means not available or missing data. Does this file structure make some sense to you?</p>
-</div>
-<div id="finding-the-mean-and-median-estimates" class="section level3" number="3.2.4">
-<h3><span class="header-section-number">3.2.4</span> Finding the mean and median estimates</h3>
-<p>Use the data to answer the following questions…</p>
-<ol style="list-style-type: decimal">
-<li>What is the mean weight estimates?</li>
-<li>What is the standard deviation of the estimates?</li>
-<li>What range of estimates encompasses 2 standard deviations around the mean?</li>
-<li>What is the median weight of the estimates?</li>
-<li>Which of these central tendency measures is the more accurate measure of the true cow weight?</li>
-<li>What is the mean weight estimate (and standard deviation) for female respondents and non-female (male and non-binary) respondents?</li>
-</ol>
-<p>You may be thinking, how do I possibly do any of this?! Well this week all the commands you need are contained in the R script you have downloaded. Also, remember from last week, we explored the R command:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="descriptive-statistics-week-2.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(lecture1_data)</span></code></pre></div>
-<p>That gave us the mean of the small dataset “lecture1_data”. This time, we want to explore the Penelope dataset. But also, the lecture_data was just a single list of numbers. The Penelope file is more like a datasheet. So we need to tell RStudio which <strong>column</strong> we are interested in. RStudio uses the format <strong>data$column</strong>. Hence, we can ask</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="descriptive-statistics-week-2.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(penelope<span class="sc">$</span>estimate) </span></code></pre></div>
-<p>and to get a standard deviation we can use the command:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="descriptive-statistics-week-2.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(penelope<span class="sc">$</span>estimate)</span></code></pre></div>
-<p>So from this, can you work out what you would do to get the median value (remember from last week how we got the median value?). Add this command to your script, run it to get the median value, and save the file.</p>
-</div>
-<div id="referencing-columns" class="section level3" number="3.2.5">
-<h3><span class="header-section-number">3.2.5</span> Referencing columns</h3>
-<p>We have seen that:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="descriptive-statistics-week-2.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(penelope<span class="sc">$</span>estimate) </span></code></pre></div>
-<p>will provide a mean of the column “estimate”. In the third column, named “fweight”, we have the estimates of just the female respondents. In the fourth column, named “oweight”, we have the estimates of the “other” respondents (males and non-binary).</p>
-<p>So can you now figure out how you might get information about the other columns, such as the female data (only) or the non-female data? Try it, based on what you have just done. Does it work?</p>
-<p>You will find that the result of the this command produces an “NA” result. This means that the answer is “Not Available”, or in other words, is a “missing value”. This is because some of the values in this column are NA, and the mean of a column with NAs will always lead to the result NA.</p>
-<p>Instead, try this command:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="descriptive-statistics-week-2.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(penelope<span class="sc">$</span>fweight, <span class="at">na.rm =</span> <span class="cn">TRUE</span> )</span></code></pre></div>
-<p>Any different? The <code>na.rm = TRUE</code> instruction tells RStudio that missing data can be ignored in this mean calculation. (in technical language, <code>na.rm</code> is a parameter of the function <code>mean</code> that removes the NAs if set to TRUE)</p>
-</div>
-<div id="evaluating-the-range-of-estimates" class="section level3" number="3.2.6">
-<h3><span class="header-section-number">3.2.6</span> evaluating the range of estimates</h3>
-<p>mean +/- 2 SDs exercise…</p>
-<p>JOHN - this probably needs a bit more intro here - asking a bit too much at this stage?
-Q3 and Q5 above ask you to think about and process what R Studio tells you from the other commands you are using. The information comes from elsewhere in the activities you have done</p>
-</div>
-<div id="simple-graphs" class="section level3" number="3.2.7">
-<h3><span class="header-section-number">3.2.7</span> simple graphs</h3>
-<p>RStudio can be used to create graphical data plots that can help interpret datasets</p>
-<p>The first thing we can do is create a histogram distribution of guesses from the sample student data to compare with the previous large sample study (i.e. the 17,000 guesses):</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="descriptive-statistics-week-2.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(penelope<span class="sc">$</span>estimate)</span></code></pre></div>
-<p>We can also create a “box and whisker plot”. Here’s a general simple description of a box-and-whisker plot as a graphical representation of data:</p>
-<p><img src="files/Week_2/box_whisker.png" /></p>
-<p>We can create a box and whisker plot for the estimate column using the following command:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="descriptive-statistics-week-2.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(penelope<span class="sc">$</span>estimate)</span></code></pre></div>
+<div id="conducting-an-analysis-of-correlation-in-r" class="section level3" number="8.2.2">
+<h3><span class="header-section-number">8.2.2</span> Conducting an analysis of correlation in R</h3>
+<p>We will now conduct a correlational analysis of some data. You can follow along with this analysis by downloading the data and R script (see above).</p>
+<p>Load the necessary packages and read in the data:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="correlation-week-11.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;broom&quot;</span>)</span>
+<span id="cb21-2"><a href="correlation-week-11.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb21-3"><a href="correlation-week-11.html#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="correlation-week-11.html#cb21-4" aria-hidden="true" tabindex="-1"></a>mh <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;MillerHadenData.csv&quot;</span>)</span>
+<span id="cb21-5"><a href="correlation-week-11.html#cb21-5" aria-hidden="true" tabindex="-1"></a>mh <span class="co"># view the data in the console</span></span></code></pre></div>
+<p>We can use the ggplot with the geom_point feature to draw a scatterplot</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="correlation-week-11.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the relationship between home and TV using a scatterplot and a line of best fit</span></span>
+<span id="cb22-2"><a href="correlation-week-11.html#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mh, <span class="fu">aes</span>(<span class="at">x =</span> Home, <span class="at">y =</span> TV)) <span class="sc">+</span> </span>
+<span id="cb22-3"><a href="correlation-week-11.html#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb22-4"><a href="correlation-week-11.html#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb22-5"><a href="correlation-week-11.html#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb22-6"><a href="correlation-week-11.html#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Time spend reading at home&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Time spend watching TV at home&quot;</span>)</span></code></pre></div>
+<p>This gives a visual representation, but we can assess the correlation statistically using the <code>cor.test()</code> function:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="correlation-week-11.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># conduct a correlation analysis, using Pearson&#39;s r</span></span>
+<span id="cb23-2"><a href="correlation-week-11.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># save this as &quot;results&quot;</span></span>
+<span id="cb23-3"><a href="correlation-week-11.html#cb23-3" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span></span>
+<span id="cb23-4"><a href="correlation-week-11.html#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cor.test</span>(<span class="at">x =</span> mh<span class="sc">$</span>Home,</span>
+<span id="cb23-5"><a href="correlation-week-11.html#cb23-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> mh<span class="sc">$</span>TV,</span>
+<span id="cb23-6"><a href="correlation-week-11.html#cb23-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">method =</span> <span class="st">&quot;pearson&quot;</span>,</span>
+<span id="cb23-7"><a href="correlation-week-11.html#cb23-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">alternative =</span> <span class="st">&quot;two.sided&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb23-8"><a href="correlation-week-11.html#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>() <span class="co"># from the broom package - gives a nicer output for the correlation result</span></span>
+<span id="cb23-9"><a href="correlation-week-11.html#cb23-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-10"><a href="correlation-week-11.html#cb23-10" aria-hidden="true" tabindex="-1"></a>results <span class="co"># print the results</span></span></code></pre></div>
+<p>The “results” object contains details about the correlation test. We can use the <code>pull()</code> function to extract the different statistical information:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="correlation-week-11.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pull out Pearson&#39;s r, the degrees of freedom and the p-value for reporting the results</span></span>
+<span id="cb24-2"><a href="correlation-week-11.html#cb24-2" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span></span>
+<span id="cb24-3"><a href="correlation-week-11.html#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(estimate) <span class="sc">%&gt;%</span></span>
+<span id="cb24-4"><a href="correlation-week-11.html#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="dv">2</span>)</span>
+<span id="cb24-5"><a href="correlation-week-11.html#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="correlation-week-11.html#cb24-6" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span></span>
+<span id="cb24-7"><a href="correlation-week-11.html#cb24-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(parameter)</span>
+<span id="cb24-8"><a href="correlation-week-11.html#cb24-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-9"><a href="correlation-week-11.html#cb24-9" aria-hidden="true" tabindex="-1"></a>pvalue <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span></span>
+<span id="cb24-10"><a href="correlation-week-11.html#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(p.value) <span class="sc">%&gt;%</span></span>
+<span id="cb24-11"><a href="correlation-week-11.html#cb24-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb24-12"><a href="correlation-week-11.html#cb24-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-13"><a href="correlation-week-11.html#cb24-13" aria-hidden="true" tabindex="-1"></a>rsquared <span class="ot">&lt;-</span> r<span class="sc">*</span>r</span>
+<span id="cb24-14"><a href="correlation-week-11.html#cb24-14" aria-hidden="true" tabindex="-1"></a>rsquaredPercent <span class="ot">&lt;-</span> <span class="fu">round</span>(rsquared <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">0</span>)</span></code></pre></div>
 
 </div>
 </div>
@@ -366,8 +354,8 @@ Q3 and Q5 above ask you to think about and process what R Studio tells you from 
           </div>
         </div>
       </div>
-<a href="introduction-to-r-studio-week-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="week6.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="filtering-outlier-values-week-9.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

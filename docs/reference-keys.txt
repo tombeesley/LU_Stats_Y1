@@ -52,7 +52,7 @@ exploring-the-median-salary-estimates
 using-mutate-to-create-a-new-column
 salary-estimates-and-risk-seeking
 unrelated-samples-t-test
-lab-activity-week-11
+correlation-week-11
 pre-lab-work-5
 online-tutorial-3
 r-studio-prep-work-4
