@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5 Visualisation I (Week 7) | Statistics for Psychologists</title>
+  <title>8 Lab activity (Week 11) | Statistics for Psychologists</title>
   <meta name="description" content="Course content for PSYC121 and PSYC122 at Lancaster University" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5 Visualisation I (Week 7) | Statistics for Psychologists" />
+  <meta property="og:title" content="8 Lab activity (Week 11) | Statistics for Psychologists" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="tombeesley/LU_PSYC121_122" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 Visualisation I (Week 7) | Statistics for Psychologists" />
+  <meta name="twitter:title" content="8 Lab activity (Week 11) | Statistics for Psychologists" />
   
   <meta name="twitter:description" content="Course content for PSYC121 and PSYC122 at Lancaster University" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="week6.html"/>
-<link rel="next" href="visualisation-ii-week-8.html"/>
+<link rel="prev" href="filtering-outlier-values-week-9.html"/>
+
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -250,78 +250,101 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="visualisation-i-week-7" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> Visualisation I (Week 7)</h1>
-<p>They say a picture paints a thousand words, so in this week’s lab we will be learning some fundamental skills in <strong>data visualisation</strong> with the <code>ggplot()</code> commands. We will also be looking at how we can run <strong>one-sample t-tests in R</strong> and we will use these to explore the estimates people gave for the median salary in the UK. Please ensure you do the pre-lab work before coming to class.</p>
-<div id="pre-lab-work-2" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Pre-lab work</h2>
-<div id="online-tutorial" class="section level3" number="5.1.1">
-<h3><span class="header-section-number">5.1.1</span> Online tutorial</h3>
-<p><a href="https://psylancs.shinyapps.io/Week_7_learnr/">Click here</a> to access the online tutorial for this week</p>
+<div id="lab-activity-week-11" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> Lab activity (Week 11)</h1>
+<div id="pre-lab-work-5" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Pre-lab work</h2>
+<div id="online-tutorial-3" class="section level3" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> Online tutorial</h3>
 </div>
-<div id="r-studio-prep-work-1" class="section level3" number="5.1.2">
-<h3><span class="header-section-number">5.1.2</span> R Studio prep work</h3>
-<p>In preparation for the lab tasks, please do the following things:</p>
+<div id="r-studio-prep-work-4" class="section level3" number="8.1.2">
+<h3><span class="header-section-number">8.1.2</span> R Studio prep work</h3>
+<p>Download the file <a href="files/Week_11/MillerHadenData.csv">MillerHadenData.csv</a>, and <a href="files/Week_11/122_wk11_labActivity.R">122_wk11_labActivity.R</a></p>
+</div>
+<div id="conceptual-prep-work-4" class="section level3" number="8.1.3">
+<h3><span class="header-section-number">8.1.3</span> Conceptual prep work</h3>
+<p><a href="https://www.rossmanchance.com/applets/GuessCorrelation.html">Click here for a basic web app</a> that will test how good you are at recognising different correlation strengths from the scatterplots. We would recommend you click the “Track Performance” tab so you can keep an overview of your overall bias to underestimate or overestimate a correlation.</p>
+<p>Is this all just a bit of fun? Well, yes, because stats is actually fun! But also no, because it serves a purpose of helping you determine if the correlations you see in your own data are real, and
+to help you see if correlations in published research match with what you are being told. As you will have seen from the above examples, one data point can lead to a misleading relationship and even what might be considered a medium to strong relationship may actually have only limited relevance in the real world.</p>
+</div>
+</div>
+<div id="lab-activities" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Lab activities</h2>
+<p>In this lab, you’ll gain understanding of and practice with:
+• constructing and interpreting scatterplots
+• running correlation analysis and interpret the results
+• reporting the results in APA format
+• constructing a correlation matrix in APA format
+• when and why to apply correlation analysis to answers questions in psychological
+science</p>
+<div id="interpreting-correlation" class="section level3" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Interpreting correlation</h3>
 <ol style="list-style-type: decimal">
-<li><p>Download the files <a href="files/Week_7/data_phone_Wk7.csv">data_phone_Wk7.csv</a>, <a href="files/Week_7/data_salary_Wk7.csv">data_salary_Wk7.csv</a>, <a href="files/Week_7/Week_7_Task_2.R">Week_7_Task_2.R</a> and <a href="files/Week_7/Week_7_Task_3.R">Week_7_Task_3.R</a>.</p></li>
-<li><p>Place the files in a suitable folder on the computer.</p></li>
-<li><p>Within R Studio, navigate to that folder in the “Files” pane and click OPEN (note the files are not shown in the folder)</p></li>
-<li><p>Select the “More” button and then “Set as Working Directory”</p></li>
-<li><p>Optional - create a new project in this folder (“File”, “New Project”, “Existing Directory”)</p></li>
+<li>Below are scatterplots that show the relationship between ‘how much you know about
+correlation and how attractive you appear to members of the opposite (&amp;/or same) sex’.</li>
 </ol>
-</div>
-<div id="conceptual-prep-work-1" class="section level3" number="5.1.3">
-<h3><span class="header-section-number">5.1.3</span> Conceptual prep work</h3>
-<p>A researcher conducts an experiment in which they ask a group of ten children aged 8 to read as many words as they can in 1 minute. They know from previous studies that children of this age typically read at 120 words per minute. This group of children have been reported as having difficulty with reading and the researchers want to see if their data are unusual. They find that the 10 children show a reading speed of 105, with a SD of 18.</p>
+<p><img src="files/Week_11/correlations.png" /></p>
 <ol style="list-style-type: decimal">
-<li><p>What is the expected mean under the null hypothesis?</p></li>
-<li><p>What is the difference between the sample mean and the expected mean (mu)?</p></li>
-<li><p>What is the standard error of the mean?</p></li>
-<li><p>What is the value of t?</p></li>
-<li><p>What is the value for the “degrees of freedom”?</p></li>
-<li><p>What is the criterion value in the t-test table (see below), at the 5% level?</p></li>
-<li><p>Can we reject the null-hypothesis?</p></li>
+<li><p>Choose the type of correlation (strength and direction) displayed in each graph using
+one of the following:
+• Perfect positive correlation
+• Perfect negative correlation
+• Strong positive correlation
+• Strong negative correlation
+• Moderate positive correlation
+• Moderate negative correlation
+• Null correlation</p></li>
+<li><p>Suppose it was observed that there is a correlation of r = -.81 between a driver’s age and
+the cost of car insurance. This correlation would mean that, in general, older people pay
+more for car insurance.
+TRUE or FALSE?
+Explain why:
+Note: explain your chosen answer based on the statistic given, not why you think the
+correlation may or may not make ‘logical’ sense.</p></li>
 </ol>
 </div>
-</div>
-<div id="lab-work-r-studio" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Lab Work (R Studio)</h2>
-<div id="visualising-phone-use" class="section level3" number="5.2.1">
-<h3><span class="header-section-number">5.2.1</span> Visualising phone use</h3>
-<p>Now that you have completed the online tutorials on <code>ggplot()</code>, it’s time to put those skills into practice with a new data set, provided in “data_phone.csv”. These data are just the phone time variables (estimated and actual) with the phone type nominal variable.</p>
-<p>Follow these steps to visualise these data:</p>
-<ol style="list-style-type: decimal">
-<li><p>Open the script “Week_7_Task_2.R” (see prep work)</p></li>
-<li><p>Run the first two lines of code:</p></li>
-</ol>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="visualisation-i-week-7.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb17-2"><a href="visualisation-i-week-7.html#cb17-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_phone.csv&quot;</span>)</span></code></pre></div>
-<ol start="3" style="list-style-type: decimal">
-<li><p>View the data with <code>view(data)</code></p></li>
-<li><p>Inside the <code>aes()</code> command, map the variable <em>screen_time_estimate</em> to the x axis, and the variable <em>screen_time_actual</em> to the y axis. In general, does it look like people’s estimates were accurate?</p></li>
-<li><p>Add a setting for <em>colour</em> outside of the <code>aes()</code>, to make all the points red.</p></li>
-<li><p>Map the <em>colour</em> to the variable <em>phone_type</em> (within <code>aes()</code>). Can you see any differences between people who have different phones?</p></li>
-<li><p>Change the axis titles and add a title for the graph using the <code>labs()</code> command.</p></li>
-<li><p>Change the theme of the graph.</p></li>
-</ol>
-</div>
-<div id="conducting-a-one-sample-t-test." class="section level3" number="5.2.2">
-<h3><span class="header-section-number">5.2.2</span> Conducting a one-sample t-test.</h3>
-<p>In this task we will run some one-sample t-tests in R to examine people’s estimates of UK salaries.</p>
-<ol style="list-style-type: decimal">
-<li><p>Open the “Week_7_Task_3.R” script (see prep work)</p></li>
-<li><p>Run the first two lines of code:</p></li>
-</ol>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="visualisation-i-week-7.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) </span>
-<span id="cb18-2"><a href="visualisation-i-week-7.html#cb18-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data_salary.csv&quot;</span>)</span></code></pre></div>
-<ol start="3" style="list-style-type: decimal">
-<li><p>Run the third command. This runs a t-test on the salary estimates. The two settings (parameters) in the t-test function are <em>x</em>, which is the column of data we are interested in testing, and <em>mu</em>, which is the value we want to compare against.</p></li>
-<li><p>Look at the output of the t-test. What does the <em>t</em> value indicate? Check the value against the criterion value in the t-test below (our N = 205, so use value for infinity). The <em>p</em> value tells you precisely how likely the data are, if the null hypothesis was true. Would we say this is statistically significant?</p></li>
-<li><p>Use the 4th command to filter the data to just those participants whose home location is the UK. Run the t-test on these data (you can copy the command, but note you will need to change the name of the data)</p></li>
-<li><p>In the same way as for Q6, check the salary ratings for those people whose home location is “Asia” and “Europe (not UK)”. Note in each case what the t-test is telling you.</p></li>
-</ol>
-<p><strong>The t-test table (criterion values of t)</strong>
-<img src="files/Week_7/ttable.png" /></p>
+<div id="conducting-an-analysis-of-correlation-in-r" class="section level3" number="8.2.2">
+<h3><span class="header-section-number">8.2.2</span> Conducting an analysis of correlation in R</h3>
+<p>We will now conduct a correlational analysis of some data. You can follow along with this analysis by downloading the data and R script (see above).</p>
+<p>Load the necessary packages and read in the data:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="lab-activity-week-11.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;broom&quot;</span>)</span>
+<span id="cb21-2"><a href="lab-activity-week-11.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb21-3"><a href="lab-activity-week-11.html#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="lab-activity-week-11.html#cb21-4" aria-hidden="true" tabindex="-1"></a>mh <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;MillerHadenData.csv&quot;</span>)</span>
+<span id="cb21-5"><a href="lab-activity-week-11.html#cb21-5" aria-hidden="true" tabindex="-1"></a>mh <span class="co"># view the data in the console</span></span></code></pre></div>
+<p>We can use the ggplot with the geom_point feature to draw a scatterplot</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="lab-activity-week-11.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the relationship between home and TV using a scatterplot and a line of best fit</span></span>
+<span id="cb22-2"><a href="lab-activity-week-11.html#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mh, <span class="fu">aes</span>(<span class="at">x =</span> Home, <span class="at">y =</span> TV)) <span class="sc">+</span> </span>
+<span id="cb22-3"><a href="lab-activity-week-11.html#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb22-4"><a href="lab-activity-week-11.html#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb22-5"><a href="lab-activity-week-11.html#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb22-6"><a href="lab-activity-week-11.html#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Time spend reading at home&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Time spend watching TV at home&quot;</span>)</span></code></pre></div>
+<p>This gives a visual representation, but we can assess the correlation statistically using the <code>cor.test()</code> function:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="lab-activity-week-11.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># conduct a correlation analysis, using Pearson&#39;s r</span></span>
+<span id="cb23-2"><a href="lab-activity-week-11.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># save this as &quot;results&quot;</span></span>
+<span id="cb23-3"><a href="lab-activity-week-11.html#cb23-3" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span></span>
+<span id="cb23-4"><a href="lab-activity-week-11.html#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cor.test</span>(<span class="at">x =</span> mh<span class="sc">$</span>Home,</span>
+<span id="cb23-5"><a href="lab-activity-week-11.html#cb23-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> mh<span class="sc">$</span>TV,</span>
+<span id="cb23-6"><a href="lab-activity-week-11.html#cb23-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">method =</span> <span class="st">&quot;pearson&quot;</span>,</span>
+<span id="cb23-7"><a href="lab-activity-week-11.html#cb23-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">alternative =</span> <span class="st">&quot;two.sided&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb23-8"><a href="lab-activity-week-11.html#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>() <span class="co"># from the broom package - gives a nicer output for the correlation result</span></span>
+<span id="cb23-9"><a href="lab-activity-week-11.html#cb23-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-10"><a href="lab-activity-week-11.html#cb23-10" aria-hidden="true" tabindex="-1"></a>results <span class="co"># print the results</span></span></code></pre></div>
+<p>The “results” object contains details about the correlation test. We can use the <code>pull()</code> function to extract the different statistical information:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="lab-activity-week-11.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pull out Pearson&#39;s r, the degrees of freedom and the p-value for reporting the results</span></span>
+<span id="cb24-2"><a href="lab-activity-week-11.html#cb24-2" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span></span>
+<span id="cb24-3"><a href="lab-activity-week-11.html#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(estimate) <span class="sc">%&gt;%</span></span>
+<span id="cb24-4"><a href="lab-activity-week-11.html#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="dv">2</span>)</span>
+<span id="cb24-5"><a href="lab-activity-week-11.html#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="lab-activity-week-11.html#cb24-6" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span></span>
+<span id="cb24-7"><a href="lab-activity-week-11.html#cb24-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(parameter)</span>
+<span id="cb24-8"><a href="lab-activity-week-11.html#cb24-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-9"><a href="lab-activity-week-11.html#cb24-9" aria-hidden="true" tabindex="-1"></a>pvalue <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span></span>
+<span id="cb24-10"><a href="lab-activity-week-11.html#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(p.value) <span class="sc">%&gt;%</span></span>
+<span id="cb24-11"><a href="lab-activity-week-11.html#cb24-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb24-12"><a href="lab-activity-week-11.html#cb24-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-13"><a href="lab-activity-week-11.html#cb24-13" aria-hidden="true" tabindex="-1"></a>rsquared <span class="ot">&lt;-</span> r<span class="sc">*</span>r</span>
+<span id="cb24-14"><a href="lab-activity-week-11.html#cb24-14" aria-hidden="true" tabindex="-1"></a>rsquaredPercent <span class="ot">&lt;-</span> <span class="fu">round</span>(rsquared <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">0</span>)</span></code></pre></div>
 
 </div>
 </div>
@@ -331,8 +354,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="week6.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="visualisation-ii-week-8.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="filtering-outlier-values-week-9.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
