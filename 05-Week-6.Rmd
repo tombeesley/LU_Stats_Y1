@@ -68,7 +68,6 @@ Follow these steps to explore this dataset:
 3. View the responses to nominal variables with `count()`
 4. For an artist of your choice, calculate the mean and SD of their ratings.
 5. Use `group_by()` and `summarise()` to see whether people's home location changes their ratings for an artist of your choice.
-6. What about conversation skills? Are those who think they have poor conversation skills more likely to prefer rock or pop music?
 
 
 ### Exploring binomial distributions and the sign test (Task 2).
