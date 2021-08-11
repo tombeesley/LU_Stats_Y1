@@ -1,607 +1,607 @@
 ID,maths_skills,stroop_condition,stroop_time
-1,Average,control,3.53
-1,Average,compatible,3.09
-1,Average,incompatible,3.56
-2,A little below average,control,5.9
-2,A little below average,compatible,5.37
-2,A little below average,incompatible,10.82
-3,A little below average,control,7
-3,A little below average,compatible,3.92
-3,A little below average,incompatible,5.970000000000001
+1,Average,control,3.73
+1,Average,compatible,3.29
+1,Average,incompatible,3.66
+2,A little below average,control,6.1000000000000005
+2,A little below average,compatible,5.2700000000000005
+2,A little below average,incompatible,11.22
+3,A little below average,control,6.9
+3,A little below average,compatible,4.22
+3,A little below average,incompatible,5.57
 4,A little below average,control,7
-4,A little below average,compatible,3
+4,A little below average,compatible,3.5
 4,A little below average,incompatible,7
-5,A little above the average,control,5.68
-5,A little above the average,compatible,5.38
+5,A little above the average,control,5.88
+5,A little above the average,compatible,4.88
 5,A little above the average,incompatible,5.6899999999999995
-6,A little above the average,control,6
-6,A little above the average,compatible,4
-6,A little above the average,incompatible,7
-8,Average,control,5.79
-8,Average,compatible,5.06
-8,Average,incompatible,6.1
-9,Average,control,7.8
-9,Average,compatible,5.63
-9,Average,incompatible,10.25
-10,A little above the average,control,7.57
-10,A little above the average,compatible,6.359999999999999
-10,A little above the average,incompatible,9.17
-11,Average,control,5
-11,Average,compatible,6
-11,Average,incompatible,8
-12,A little above the average,control,7
-12,A little above the average,compatible,9
-12,A little above the average,incompatible,7
-13,Average,control,5
-13,Average,compatible,4
-13,Average,incompatible,7
-14,A little below average,control,6.9
-14,A little below average,compatible,4.96
-14,A little below average,incompatible,7.319999999999999
-15,Average,control,4
-15,Average,compatible,3
+6,A little above the average,control,6.4
+6,A little above the average,compatible,4.5
+6,A little above the average,incompatible,7.2
+8,Average,control,5.29
+8,Average,compatible,5.46
+8,Average,incompatible,6.199999999999999
+9,Average,control,7.3
+9,Average,compatible,6.13
+9,Average,incompatible,10.65
+10,A little above the average,control,7.17
+10,A little above the average,compatible,5.859999999999999
+10,A little above the average,incompatible,9.37
+11,Average,control,5.5
+11,Average,compatible,5.9
+11,Average,incompatible,8.5
+12,A little above the average,control,7.1
+12,A little above the average,compatible,9.4
+12,A little above the average,incompatible,6.6
+13,Average,control,4.6
+13,Average,compatible,4.1
+13,Average,incompatible,7.3
+14,A little below average,control,7.2
+14,A little below average,compatible,5.16
+14,A little below average,incompatible,7.72
+15,Average,control,3.5
+15,Average,compatible,3.2
 15,Average,incompatible,8
-16,Average,control,4.6
-16,Average,compatible,3.4
-16,Average,incompatible,5.9
-17,Average,control,5
-17,Average,compatible,4
-17,Average,incompatible,5
-18,A little above the average,control,4
-18,A little above the average,compatible,6
-18,A little above the average,incompatible,6
-19,Average,control,6.56
-19,Average,compatible,4.6499999999999995
-19,Average,incompatible,10.9
-20,A little above the average,control,4.79
-20,A little above the average,compatible,3.7600000000000002
-20,A little above the average,incompatible,6.109999999999999
-21,Average,control,3.67
-21,Average,compatible,3.57
-21,Average,incompatible,4.85
-22,Average,control,7.72
-22,Average,compatible,6.5
-22,Average,incompatible,6.5
-23,Average,control,6
+16,Average,control,5.1
+16,Average,compatible,3.6
+16,Average,incompatible,6.4
+17,Average,control,4.8
+17,Average,compatible,4.4
+17,Average,incompatible,4.6
+18,A little above the average,control,3.8
+18,A little above the average,compatible,5.7
+18,A little above the average,incompatible,5.8
+19,Average,control,6.96
+19,Average,compatible,5.05
+19,Average,incompatible,11.1
+20,A little above the average,control,4.59
+20,A little above the average,compatible,3.8600000000000003
+20,A little above the average,incompatible,5.909999999999999
+21,Average,control,3.87
+21,Average,compatible,3.17
+21,Average,incompatible,5.1499999999999995
+22,Average,control,7.22
+22,Average,compatible,6.4
+22,Average,incompatible,6.2
+23,Average,control,5.5
 23,Average,compatible,5.2
-23,Average,incompatible,5.8
-24,Average,control,3
-24,Average,compatible,2.5
-24,Average,incompatible,5.6
-25,Average,control,6
-25,Average,compatible,3
-25,Average,incompatible,7
-26,A little below average,control,6
-26,A little below average,compatible,4
-26,A little below average,incompatible,7
-27,Average,control,4
-27,Average,compatible,3
-27,Average,incompatible,7
-28,Average,control,5
-28,Average,compatible,4
-28,Average,incompatible,7
-29,A little above the average,control,9
-29,A little above the average,compatible,5
-29,A little above the average,incompatible,7
-30,A little above the average,control,4
-30,A little above the average,compatible,5
-30,A little above the average,incompatible,8
-31,Average,control,4.13
-31,Average,compatible,3.7800000000000002
-31,Average,incompatible,4.55
-32,Average,control,5.8
+23,Average,incompatible,6
+24,Average,control,2.6
+24,Average,compatible,2.2
+24,Average,incompatible,5.699999999999999
+25,Average,control,6.4
+25,Average,compatible,2.6
+25,Average,incompatible,6.8
+26,A little below average,control,6.1
+26,A little below average,compatible,4.5
+26,A little below average,incompatible,7.2
+27,Average,control,4.4
+27,Average,compatible,3.1
+27,Average,incompatible,7.5
+28,Average,control,5.3
+28,Average,compatible,3.8
+28,Average,incompatible,7.4
+29,A little above the average,control,8.8
+29,A little above the average,compatible,4.6
+29,A little above the average,incompatible,6.6
+30,A little above the average,control,4.1
+30,A little above the average,compatible,5.1
+30,A little above the average,incompatible,7.6
+31,Average,control,4.23
+31,Average,compatible,3.58
+31,Average,incompatible,4.05
+32,Average,control,6
 32,Average,compatible,4.23
-32,Average,incompatible,8.729999999999999
+32,Average,incompatible,8.429999999999998
 33,Average,control,6
-33,Average,compatible,4
-33,Average,incompatible,7
-34,Average,control,5.38
-34,Average,compatible,4.1499999999999995
-34,Average,incompatible,6.46
-35,Average,control,8
-35,Average,compatible,4
-35,Average,incompatible,11
-36,A little above the average,control,5
+33,Average,compatible,4.1
+33,Average,incompatible,6.5
+34,Average,control,5.48
+34,Average,compatible,3.7499999999999996
+34,Average,incompatible,6.16
+35,Average,control,7.8
+35,Average,compatible,4.3
+35,Average,incompatible,11.4
+36,A little above the average,control,4.5
 36,A little above the average,compatible,5
-36,A little above the average,incompatible,7
-37,Average,control,5.3
-37,Average,compatible,5.1
-37,Average,incompatible,7.2
+36,A little above the average,incompatible,7.1
+37,Average,control,4.8
+37,Average,compatible,5.6
+37,Average,incompatible,7.7
 38,Average,control,5
-38,Average,compatible,3
-38,Average,incompatible,7
-39,A little above the average,control,9.7
-39,A little above the average,compatible,4.91
-39,A little above the average,incompatible,10.350000000000001
-40,Average,control,3
-40,Average,compatible,3
-40,Average,incompatible,6
-41,Average,control,15
-41,Average,compatible,8
-41,Average,incompatible,30
-42,A little below average,control,4.7
-42,A little below average,compatible,3.8
-42,A little below average,incompatible,6.4
-43,Average,control,4.430000000000001
+38,Average,compatible,3.2
+38,Average,incompatible,6.9
+39,A little above the average,control,10.1
+39,A little above the average,compatible,4.41
+39,A little above the average,incompatible,10.250000000000002
+40,Average,control,3.4
+40,Average,compatible,3.3
+40,Average,incompatible,6.4
+41,Average,control,14.9
+41,Average,compatible,7.8
+41,Average,incompatible,29.8
+42,A little below average,control,4.2
+42,A little below average,compatible,4.1
+42,A little below average,incompatible,5.9
+43,Average,control,4.130000000000001
 43,Average,compatible,3.71
-43,Average,incompatible,5.63
-44,Average,control,4.76
-44,Average,compatible,3.52
-44,Average,incompatible,5.76
-45,Average,control,7
-45,Average,compatible,5
-45,Average,incompatible,6
-46,A little below average,control,5
-46,A little below average,compatible,3
-46,A little below average,incompatible,9
+43,Average,incompatible,5.83
+44,Average,control,4.66
+44,Average,compatible,3.02
+44,Average,incompatible,5.66
+45,Average,control,6.9
+45,Average,compatible,5.3
+45,Average,incompatible,6.2
+46,A little below average,control,4.9
+46,A little below average,compatible,3.3
+46,A little below average,incompatible,8.8
 47,A little above the average,control,3.59
-47,A little above the average,compatible,3.7600000000000002
-47,A little above the average,incompatible,4.49
-48,A little above the average,control,4
-48,A little above the average,compatible,4
-48,A little above the average,incompatible,5
-49,A little below average,control,3
-49,A little below average,compatible,3
-49,A little below average,incompatible,4
-50,Average,control,4.51
-50,Average,compatible,3.46
+47,A little above the average,compatible,3.66
+47,A little above the average,incompatible,4.09
+48,A little above the average,control,4.4
+48,A little above the average,compatible,3.6
+48,A little above the average,incompatible,5.2
+49,A little below average,control,3.3
+49,A little below average,compatible,3.2
+49,A little below average,incompatible,3.7
+50,Average,control,4.21
+50,Average,compatible,3.06
 50,Average,incompatible,4.91
-51,Average,control,3.22
-51,Average,compatible,3.01
-51,Average,incompatible,3.88
-52,Average,control,7.38
-52,Average,compatible,6.6
-52,Average,incompatible,7.55
-53,Well below average,control,8
-53,Well below average,compatible,7
-53,Well below average,incompatible,6
+51,Average,control,3.4200000000000004
+51,Average,compatible,2.51
+51,Average,incompatible,4.38
+52,Average,control,7.28
+52,Average,compatible,6.8999999999999995
+52,Average,incompatible,7.85
+53,Well below average,control,8.1
+53,Well below average,compatible,7.4
+53,Well below average,incompatible,5.6
 54,Average,control,4
-54,Average,compatible,3
-54,Average,incompatible,5
-55,A little below average,control,4.1499999999999995
-55,A little below average,compatible,2.86
-55,A little below average,incompatible,5.9
-56,A little above the average,control,8
-56,A little above the average,compatible,5
+54,Average,compatible,2.6
+54,Average,incompatible,4.9
+55,A little below average,control,4.25
+55,A little below average,compatible,3.06
+55,A little below average,incompatible,5.5
+56,A little above the average,control,7.8
+56,A little above the average,compatible,5.5
 56,A little above the average,incompatible,7
-57,A little above the average,control,2.9
-57,A little above the average,compatible,2.7
-57,A little above the average,incompatible,2.7
-58,Average,control,6
-58,Average,compatible,4.79
-58,Average,incompatible,6.2
-59,Well below average,control,5.1
-59,Well below average,compatible,3.9
-59,Well below average,incompatible,5.7
+57,A little above the average,control,2.4
+57,A little above the average,compatible,2.8000000000000003
+57,A little above the average,incompatible,3
+58,Average,control,6.5
+58,Average,compatible,4.69
+58,Average,incompatible,6.4
+59,Well below average,control,4.699999999999999
+59,Well below average,compatible,4.2
+59,Well below average,incompatible,6.1000000000000005
 60,Average,control,5.35
-60,Average,compatible,2.73
-60,Average,incompatible,6.75
-61,A little below average,control,5.83
-61,A little below average,compatible,2.73
-61,A little below average,incompatible,5.99
-62,A little above the average,control,5
+60,Average,compatible,3.13
+60,Average,incompatible,6.45
+61,A little below average,control,5.33
+61,A little below average,compatible,2.5300000000000002
+61,A little below average,incompatible,6.09
+62,A little above the average,control,4.5
 62,A little above the average,compatible,3
-62,A little above the average,incompatible,5
-63,Average,control,8
+62,A little above the average,incompatible,5.1
+63,Average,control,7.6
 63,Average,compatible,8
-63,Average,incompatible,11
-64,A little above the average,control,5.51
-64,A little above the average,compatible,4.42
-64,A little above the average,incompatible,10.61
-65,Average,control,4.56
-65,Average,compatible,3.59
+63,Average,incompatible,10.9
+64,A little above the average,control,5.109999999999999
+64,A little above the average,compatible,4.72
+64,A little above the average,incompatible,10.51
+65,Average,control,4.46
+65,Average,compatible,3.19
 65,Average,incompatible,7.49
-66,Average,control,6.58
-66,Average,compatible,5.39
+66,Average,control,6.78
+66,Average,compatible,5.79
 66,Average,incompatible,8.2
-67,A little below average,control,6.119999999999999
-67,A little below average,compatible,5.33
-67,A little below average,incompatible,7.319999999999999
-68,A little below average,control,4.85
-68,A little below average,compatible,3.18
-68,A little below average,incompatible,5.8
-69,Well above average,control,6.76
-69,Well above average,compatible,5.5
-69,Well above average,incompatible,6.6499999999999995
-70,Well below average,control,12
-70,Well below average,compatible,10.3
+67,A little below average,control,5.919999999999999
+67,A little below average,compatible,4.83
+67,A little below average,incompatible,6.819999999999999
+68,A little below average,control,4.35
+68,A little below average,compatible,3.2800000000000002
+68,A little below average,incompatible,5.7
+69,Well above average,control,6.66
+69,Well above average,compatible,5
+69,Well above average,incompatible,6.35
+70,Well below average,control,11.8
+70,Well below average,compatible,10.8
 70,Well below average,incompatible,12
-71,Average,control,6
-71,Average,compatible,3
-71,Average,incompatible,7
-72,A little above the average,control,4.1899999999999995
-72,A little above the average,compatible,3.92
-72,A little above the average,incompatible,6
-73,Average,control,7.01
-73,Average,compatible,6.21
-73,Average,incompatible,7.430000000000001
-74,Average,control,4.56
-74,Average,compatible,3.4499999999999997
-74,Average,incompatible,5.37
-75,A little above the average,control,6
-75,A little above the average,compatible,4
+71,Average,control,6.4
+71,Average,compatible,2.8
+71,Average,incompatible,6.6
+72,A little above the average,control,4.489999999999999
+72,A little above the average,compatible,4.42
+72,A little above the average,incompatible,5.9
+73,Average,control,6.71
+73,Average,compatible,6.51
+73,Average,incompatible,7.130000000000001
+74,Average,control,4.46
+74,Average,compatible,3.75
+74,Average,incompatible,5.470000000000001
+75,A little above the average,control,5.5
+75,A little above the average,compatible,4.3
 75,A little above the average,incompatible,7
-76,Average,control,4
-76,Average,compatible,4
-76,Average,incompatible,5
+76,Average,control,3.8
+76,Average,compatible,3.5
+76,Average,incompatible,5.3
 77,Average,control,7.64
-77,Average,compatible,4.08
-77,Average,incompatible,8
-78,A little above the average,control,6
-78,A little above the average,compatible,5
-78,A little above the average,incompatible,7
-79,A little above the average,control,3.5
-79,A little above the average,compatible,3
-79,A little above the average,incompatible,5.2
-80,Average,control,5
-80,Average,compatible,4
-80,Average,incompatible,7
-81,A little above the average,control,5
-81,A little above the average,compatible,4
-81,A little above the average,incompatible,6
-82,A little above the average,control,4.81
-82,A little above the average,compatible,2.7800000000000002
-82,A little above the average,incompatible,7.4
+77,Average,compatible,4.28
+77,Average,incompatible,8.3
+78,A little above the average,control,5.6
+78,A little above the average,compatible,5.4
+78,A little above the average,incompatible,6.6
+79,A little above the average,control,3
+79,A little above the average,compatible,3.2
+79,A little above the average,incompatible,5.300000000000001
+80,Average,control,4.7
+80,Average,compatible,3.5
+80,Average,incompatible,6.5
+81,A little above the average,control,4.7
+81,A little above the average,compatible,4.4
+81,A little above the average,incompatible,6.2
+82,A little above the average,control,4.71
+82,A little above the average,compatible,2.3800000000000003
+82,A little above the average,incompatible,6.9
 83,Average,control,6
-83,Average,compatible,4
+83,Average,compatible,3.8
 83,Average,incompatible,10
-84,Average,control,4.7
-84,Average,compatible,3.18
-84,Average,incompatible,7.8
-85,Well below average,control,5
-85,Well below average,compatible,3.3
-85,Well below average,incompatible,9
-86,A little above the average,control,5.7
-86,A little above the average,compatible,4.83
-86,A little above the average,incompatible,6.99
-87,A little below average,control,6.42
-87,A little below average,compatible,5.92
-87,A little below average,incompatible,5.59
-88,A little below average,control,4.05
-88,A little below average,compatible,3.94
-88,A little below average,incompatible,6.08
-89,Average,control,5.09
-89,Average,compatible,7.02
-89,Average,incompatible,6.52
-90,Average,control,4.37
-90,Average,compatible,3.5
-90,Average,incompatible,7.46
-91,Average,control,7
-91,Average,compatible,4.44
-91,Average,incompatible,7.6899999999999995
+84,Average,control,4.9
+84,Average,compatible,3.58
+84,Average,incompatible,8.2
+85,Well below average,control,4.8
+85,Well below average,compatible,2.8
+85,Well below average,incompatible,8.5
+86,A little above the average,control,5.4
+86,A little above the average,compatible,4.53
+86,A little above the average,incompatible,6.49
+87,A little below average,control,6.72
+87,A little below average,compatible,5.42
+87,A little below average,incompatible,6.09
+88,A little below average,control,3.75
+88,A little below average,compatible,4.24
+88,A little below average,incompatible,6.38
+89,Average,control,4.6899999999999995
+89,Average,compatible,7.319999999999999
+89,Average,incompatible,6.42
+90,Average,control,3.97
+90,Average,compatible,3
+90,Average,incompatible,7.16
+91,Average,control,7.2
+91,Average,compatible,3.9400000000000004
+91,Average,incompatible,7.39
 92,A little below average,control,4.49
-92,A little below average,compatible,3.7
-92,A little below average,incompatible,6.25
-93,Average,control,6.44
-93,Average,compatible,5.74
-93,Average,incompatible,8.55
-94,A little below average,control,8.6
-94,A little below average,compatible,6.55
-94,A little below average,incompatible,8.629999999999999
-95,Well above average,control,6
-95,Well above average,compatible,7
-95,Well above average,incompatible,8
-96,A little below average,control,7
-96,A little below average,compatible,4
-96,A little below average,incompatible,8
-97,A little above the average,control,6
-97,A little above the average,compatible,3
-97,A little above the average,incompatible,7
-98,Well above average,control,7
-98,Well above average,compatible,5
-98,Well above average,incompatible,7
-99,Average,control,4
-99,Average,compatible,3
-99,Average,incompatible,5
-100,A little above the average,control,7
-100,A little above the average,compatible,5
-100,A little above the average,incompatible,8
-101,Average,control,6
-101,Average,compatible,5
-101,Average,incompatible,5
-102,Average,control,8
-102,Average,compatible,4
+92,A little below average,compatible,3.3000000000000003
+92,A little below average,incompatible,6.45
+93,Average,control,6.94
+93,Average,compatible,6.140000000000001
+93,Average,incompatible,8.950000000000001
+94,A little below average,control,8.299999999999999
+94,A little below average,compatible,6.1499999999999995
+94,A little below average,incompatible,8.53
+95,Well above average,control,5.7
+95,Well above average,compatible,7.3
+95,Well above average,incompatible,8.4
+96,A little below average,control,7.5
+96,A little below average,compatible,3.9
+96,A little below average,incompatible,8.2
+97,A little above the average,control,5.9
+97,A little above the average,compatible,3.1
+97,A little above the average,incompatible,7.2
+98,Well above average,control,7.5
+98,Well above average,compatible,4.7
+98,Well above average,incompatible,6.5
+99,Average,control,4.4
+99,Average,compatible,2.6
+99,Average,incompatible,4.7
+100,A little above the average,control,7.1
+100,A little above the average,compatible,5.1
+100,A little above the average,incompatible,8.5
+101,Average,control,5.5
+101,Average,compatible,4.5
+101,Average,incompatible,4.9
+102,Average,control,7.6
+102,Average,compatible,3.5
 102,Average,incompatible,8
-103,A little below average,control,4.91
-103,A little below average,compatible,3.02
-103,A little below average,incompatible,4.54
-104,A little above the average,control,3.96
-104,A little above the average,compatible,3.29
-104,A little above the average,incompatible,6.13
-105,Average,control,6
-105,Average,compatible,3.96
-105,Average,incompatible,9.34
-106,Average,control,4.45
-106,Average,compatible,3.53
-106,Average,incompatible,4.859999999999999
-107,A little below average,control,0.14
-107,A little below average,compatible,0.9
-107,A little below average,incompatible,0.14
-108,A little above the average,control,5
-108,A little above the average,compatible,3
-108,A little above the average,incompatible,5
-109,Average,control,4.88
+103,A little below average,control,5.3100000000000005
+103,A little below average,compatible,3.22
+103,A little below average,incompatible,4.94
+104,A little above the average,control,3.66
+104,A little above the average,compatible,2.99
+104,A little above the average,incompatible,5.7299999999999995
+105,Average,control,5.9
+105,Average,compatible,3.66
+105,Average,incompatible,9.24
+106,Average,control,3.95
+106,Average,compatible,3.13
+106,Average,incompatible,5.06
+107,A little below average,control,0.2400000000000001
+107,A little below average,compatible,0.8
+107,A little below average,incompatible,0.44000000000000006
+108,A little above the average,control,4.7
+108,A little above the average,compatible,2.6
+108,A little above the average,incompatible,4.9
+109,Average,control,5.28
 109,Average,compatible,3.52
-109,Average,incompatible,6.35
-110,Average,control,6
-110,Average,compatible,8
-110,Average,incompatible,15
-111,A little above the average,control,7
-111,A little above the average,compatible,4
-111,A little above the average,incompatible,8
-112,Average,control,7.68
-112,Average,compatible,4.49
-112,Average,incompatible,7.35
-113,A little above the average,control,7.31
-113,A little above the average,compatible,7.55
-113,A little above the average,incompatible,8.850000000000001
-114,Well above average,control,10
+109,Average,incompatible,6.25
+110,Average,control,6.3
+110,Average,compatible,8.2
+110,Average,incompatible,15.3
+111,A little above the average,control,6.5
+111,A little above the average,compatible,4.5
+111,A little above the average,incompatible,8.5
+112,Average,control,7.38
+112,Average,compatible,4.890000000000001
+112,Average,incompatible,7.85
+113,A little above the average,control,7.71
+113,A little above the average,compatible,7.95
+113,A little above the average,incompatible,8.450000000000001
+114,Well above average,control,9.5
 114,Well above average,compatible,6
-114,Well above average,incompatible,14
-115,Average,control,6
-115,Average,compatible,5
+114,Well above average,incompatible,14.2
+115,Average,control,5.5
+115,Average,compatible,4.7
 115,Average,incompatible,8
-116,A little above the average,control,4.71
-116,A little above the average,compatible,2.58
-116,A little above the average,incompatible,6.33
-117,Average,control,6
-117,Average,compatible,5
-117,Average,incompatible,6
-118,A little below average,control,8
+116,A little above the average,control,4.91
+116,A little above the average,compatible,2.7800000000000002
+116,A little above the average,incompatible,5.93
+117,Average,control,5.5
+117,Average,compatible,4.8
+117,Average,incompatible,6.3
+118,A little below average,control,7.6
 118,A little below average,compatible,4
-118,A little below average,incompatible,13
-119,Average,control,6
-119,Average,compatible,4
-119,Average,incompatible,8
-120,A little below average,control,7
-120,A little below average,compatible,4
-120,A little below average,incompatible,6
-121,A little below average,control,6
-121,A little below average,compatible,4
-121,A little below average,incompatible,8
-122,A little below average,control,6.25
+118,A little below average,incompatible,13.4
+119,Average,control,6.2
+119,Average,compatible,4.2
+119,Average,incompatible,8.5
+120,A little below average,control,7.4
+120,A little below average,compatible,4.1
+120,A little below average,incompatible,5.8
+121,A little below average,control,5.6
+121,A little below average,compatible,3.6
+121,A little below average,incompatible,8.1
+122,A little below average,control,6.75
 122,A little below average,compatible,6.5
-122,A little below average,incompatible,11.54
+122,A little below average,incompatible,11.94
 123,Average,control,4.430000000000001
-123,Average,compatible,4.09
-123,Average,incompatible,5.23
-124,Average,control,4
-124,Average,compatible,4
-124,Average,incompatible,5
-125,A little above the average,control,7
-125,A little above the average,compatible,4
+123,Average,compatible,4.29
+123,Average,incompatible,5.430000000000001
+124,Average,control,4.5
+124,Average,compatible,4.4
+124,Average,incompatible,5.4
+125,A little above the average,control,6.8
+125,A little above the average,compatible,4.1
 125,A little above the average,incompatible,6.8
-126,A little below average,control,5
+126,A little below average,control,5.5
 126,A little below average,compatible,5
-126,A little below average,incompatible,7
-127,A little below average,control,4.9
-127,A little below average,compatible,4.79
-127,A little below average,incompatible,10.81
-128,Average,control,5
-128,Average,compatible,3.9
+126,A little below average,incompatible,7.3
+127,A little below average,control,5.2
+127,A little below average,compatible,4.890000000000001
+127,A little below average,incompatible,11.110000000000001
+128,Average,control,5.3
+128,Average,compatible,4.1
 128,Average,incompatible,7
 129,Average,control,5.71
-129,Average,compatible,4.39
-129,Average,incompatible,6.99
-130,A little above the average,control,6
-130,A little above the average,compatible,6
-130,A little above the average,incompatible,7
-131,A little below average,control,6.55
-131,A little below average,compatible,4.74
-131,A little below average,incompatible,4.53
-132,Well below average,control,6.619999999999999
+129,Average,compatible,4.1899999999999995
+129,Average,incompatible,6.79
+130,A little above the average,control,6.5
+130,A little above the average,compatible,6.5
+130,A little above the average,incompatible,6.7
+131,A little below average,control,6.95
+131,A little below average,compatible,5.04
+131,A little below average,incompatible,5.03
+132,Well below average,control,6.219999999999999
 132,Well below average,compatible,3.74
-132,Well below average,incompatible,7.609999999999999
-133,Average,control,5.38
-133,Average,compatible,5.31
-133,Average,incompatible,8.16
-134,A little above the average,control,3.4299999999999997
-134,A little above the average,compatible,3.01
-134,A little above the average,incompatible,6.109999999999999
-135,A little above the average,control,4
-135,A little above the average,compatible,3
-135,A little above the average,incompatible,9
-136,A little above the average,control,4.76
-136,A little above the average,compatible,3.3
-136,A little above the average,incompatible,8.05
-137,Average,control,3
-137,Average,compatible,2
+132,Well below average,incompatible,7.51
+133,Average,control,5.08
+133,Average,compatible,4.81
+133,Average,incompatible,8.46
+134,A little above the average,control,3.8299999999999996
+134,A little above the average,compatible,2.8099999999999996
+134,A little above the average,incompatible,6.609999999999999
+135,A little above the average,control,4.1
+135,A little above the average,compatible,2.5
+135,A little above the average,incompatible,9.3
+136,A little above the average,control,4.46
+136,A little above the average,compatible,2.8
+136,A little above the average,incompatible,8.350000000000001
+137,Average,control,2.7
+137,Average,compatible,2.4
 137,Average,incompatible,5
 138,Average,control,8
-138,Average,compatible,5
-138,Average,incompatible,11
-139,A little below average,control,5
-139,A little below average,compatible,5
-139,A little below average,incompatible,7
-140,Average,control,6
-140,Average,compatible,4
+138,Average,compatible,4.7
+138,Average,incompatible,10.7
+139,A little below average,control,4.5
+139,A little below average,compatible,5.4
+139,A little below average,incompatible,6.5
+140,Average,control,6.4
+140,Average,compatible,4.3
 140,Average,incompatible,7
 141,Average,control,4
-141,Average,compatible,5
-141,Average,incompatible,10
-142,A little below average,control,5
+141,Average,compatible,5.5
+141,Average,incompatible,10.3
+142,A little below average,control,4.9
 142,A little below average,compatible,4
 142,A little below average,incompatible,5
-143,Well above average,control,4.1
-143,Well above average,compatible,3.75
-143,Well above average,incompatible,6.01
-144,Average,control,4.88
-144,Average,compatible,5.08
-144,Average,incompatible,4.38
-145,Average,control,7.79
+143,Well above average,control,4.5
+143,Well above average,compatible,3.55
+143,Well above average,incompatible,5.81
+144,Average,control,4.4799999999999995
+144,Average,compatible,4.88
+144,Average,incompatible,4.58
+145,Average,control,7.29
 145,Average,compatible,7.03
 145,Average,incompatible,8.55
 146,Average,control,4.25
-146,Average,compatible,3.7800000000000002
-146,Average,incompatible,6.45
-147,Average,control,4.51
-147,Average,compatible,4.67
-147,Average,incompatible,5
-148,Average,control,5.68
-148,Average,compatible,6.430000000000001
-148,Average,incompatible,7.81
-149,Average,control,5.89
-149,Average,compatible,3.02
+146,Average,compatible,4.180000000000001
+146,Average,incompatible,6.8500000000000005
+147,Average,control,5.01
+147,Average,compatible,4.37
+147,Average,incompatible,5.2
+148,Average,control,5.88
+148,Average,compatible,6.130000000000001
+148,Average,incompatible,7.31
+149,Average,control,6.29
+149,Average,compatible,2.72
 149,Average,incompatible,7.3
-150,Average,control,5.359999999999999
-150,Average,compatible,3.25
-150,Average,incompatible,7.319999999999999
-151,A little below average,control,6.319999999999999
-151,A little below average,compatible,5.8
-151,A little below average,incompatible,6.88
-152,Average,control,15.46
+150,Average,control,5.159999999999999
+150,Average,compatible,3.65
+150,Average,incompatible,6.919999999999999
+151,A little below average,control,6.119999999999999
+151,A little below average,compatible,5.3999999999999995
+151,A little below average,incompatible,7.18
+152,Average,control,15.16
 152,Average,compatible,16.55
-152,Average,incompatible,16.1
-153,A little above the average,control,5
-153,A little above the average,compatible,3
-153,A little above the average,incompatible,6
+152,Average,incompatible,16.400000000000002
+153,A little above the average,control,5.2
+153,A little above the average,compatible,2.8
+153,A little above the average,incompatible,6.5
 154,A little above the average,control,3.48
-154,A little above the average,compatible,3.08
-154,A little above the average,incompatible,4.159999999999999
-155,A little below average,control,3.7800000000000002
-155,A little below average,compatible,3.36
-155,A little below average,incompatible,5.51
+154,A little above the average,compatible,3.58
+154,A little above the average,incompatible,3.6599999999999993
+155,A little below average,control,3.2800000000000002
+155,A little below average,compatible,3.66
+155,A little below average,incompatible,5.609999999999999
 156,Average,control,5
-156,Average,compatible,5
-156,Average,incompatible,7
-157,A little below average,control,9
-157,A little below average,compatible,4
-157,A little below average,incompatible,9
-158,Average,control,4
-158,Average,compatible,3
-158,Average,incompatible,6
-159,Average,control,10
-159,Average,compatible,5
+156,Average,compatible,4.6
+156,Average,incompatible,6.9
+157,A little below average,control,9.1
+157,A little below average,compatible,3.5
+157,A little below average,incompatible,9.1
+158,Average,control,3.6
+158,Average,compatible,3.3
+158,Average,incompatible,6.2
+159,Average,control,10.4
+159,Average,compatible,4.7
 159,Average,incompatible,10
-160,Average,control,4
-160,Average,compatible,3
-160,Average,incompatible,6
-161,Average,control,4.8
-161,Average,compatible,5.09
-161,Average,incompatible,4.56
-162,Average,control,4.22
-162,Average,compatible,3.51
-162,Average,incompatible,5.6
-163,Average,control,4
-163,Average,compatible,2.6
-163,Average,incompatible,6
-164,Average,control,10
+160,Average,control,4.4
+160,Average,compatible,3.3
+160,Average,incompatible,6.4
+161,Average,control,4.7
+161,Average,compatible,4.59
+161,Average,incompatible,4.06
+162,Average,control,4.42
+162,Average,compatible,3.61
+162,Average,incompatible,5.1
+163,Average,control,4.3
+163,Average,compatible,2.1
+163,Average,incompatible,6.4
+164,Average,control,10.4
 164,Average,compatible,7
-164,Average,incompatible,21
-165,Average,control,7
-165,Average,compatible,5
-165,Average,incompatible,9.5
-166,Average,control,5
-166,Average,compatible,3
-166,Average,incompatible,7
-167,Average,control,6
-167,Average,compatible,6
-167,Average,incompatible,8
-168,Average,control,4
-168,Average,compatible,3
+164,Average,incompatible,21.4
+165,Average,control,6.6
+165,Average,compatible,4.7
+165,Average,incompatible,10
+166,Average,control,4.5
+166,Average,compatible,3.4
+166,Average,incompatible,7.1
+167,Average,control,6.2
+167,Average,compatible,6.3
+167,Average,incompatible,8.5
+168,Average,control,4.1
+168,Average,compatible,2.7
 168,Average,incompatible,7
-169,Average,control,5
-169,Average,compatible,5
-169,Average,incompatible,11
-170,Well above average,control,2.25
-170,Well above average,compatible,2.4299999999999997
-170,Well above average,incompatible,2.7600000000000002
-172,Average,control,5
-172,Average,compatible,4
-172,Average,incompatible,5
-173,Average,control,4
-173,Average,compatible,3
-173,Average,incompatible,7
-174,Average,control,6
-174,Average,compatible,3
-174,Average,incompatible,8
-175,Well above average,control,5
+169,Average,control,4.5
+169,Average,compatible,4.6
+169,Average,incompatible,10.8
+170,Well above average,control,1.75
+170,Well above average,compatible,2.9299999999999997
+170,Well above average,incompatible,2.5600000000000005
+172,Average,control,5.3
+172,Average,compatible,3.8
+172,Average,incompatible,4.6
+173,Average,control,3.9
+173,Average,compatible,3.5
+173,Average,incompatible,7.1
+174,Average,control,6.3
+174,Average,compatible,2.5
+174,Average,incompatible,7.7
+175,Well above average,control,4.5
 175,Well above average,compatible,4
-175,Well above average,incompatible,6
-176,Average,control,6
+175,Well above average,incompatible,6.1
+176,Average,control,5.8
 176,Average,compatible,6
-176,Average,incompatible,6
-177,Average,control,4
-177,Average,compatible,4
-177,Average,incompatible,5
-178,Average,control,7
-178,Average,compatible,7
-178,Average,incompatible,12
-179,Average,control,7
-179,Average,compatible,4
-179,Average,incompatible,7
-180,Average,control,4.53
-180,Average,compatible,3.14
-180,Average,incompatible,7.79
-181,A little below average,control,8
-181,A little below average,compatible,6
-181,A little below average,incompatible,9
-182,A little below average,control,6
-182,A little below average,compatible,5
-182,A little below average,incompatible,6
-183,A little below average,control,6
-183,A little below average,compatible,3
+176,Average,incompatible,6.1
+177,Average,control,3.6
+177,Average,compatible,4.3
+177,Average,incompatible,5.4
+178,Average,control,6.9
+178,Average,compatible,7.4
+178,Average,incompatible,12.3
+179,Average,control,6.7
+179,Average,compatible,4.4
+179,Average,incompatible,6.8
+180,Average,control,5.03
+180,Average,compatible,3.64
+180,Average,incompatible,7.99
+181,A little below average,control,8.1
+181,A little below average,compatible,5.7
+181,A little below average,incompatible,8.9
+182,A little below average,control,5.7
+182,A little below average,compatible,4.5
+182,A little below average,incompatible,5.6
+183,A little below average,control,5.7
+183,A little below average,compatible,3.4
 183,A little below average,incompatible,12
-184,Well below average,control,6.3
+184,Well below average,control,5.8999999999999995
 184,Well below average,compatible,5.38
-184,Well below average,incompatible,7.22
-185,Average,control,4.5
-185,Average,compatible,3.9
-185,Average,incompatible,5.9
-186,A little below average,control,10.83
+184,Well below average,incompatible,7.42
+185,Average,control,4.7
+185,Average,compatible,3.7
+185,Average,incompatible,6.4
+186,A little below average,control,11.03
 186,A little below average,compatible,6.58
-186,A little below average,incompatible,12.98
-187,A little below average,control,6
-187,A little below average,compatible,5
+186,A little below average,incompatible,12.68
+187,A little below average,control,5.5
+187,A little below average,compatible,4.8
 187,A little below average,incompatible,7
 188,Well below average,control,9
-188,Well below average,compatible,6
-188,Well below average,incompatible,8
-189,Average,control,3.54
-189,Average,compatible,2.61
-189,Average,incompatible,6.930000000000001
-190,Average,control,6
-190,Average,compatible,5
-190,Average,incompatible,7
-191,A little below average,control,4
-191,A little below average,compatible,7
-191,A little below average,incompatible,6
-192,A little below average,control,8
-192,A little below average,compatible,6
-192,A little below average,incompatible,11
-193,A little above the average,control,3
-193,A little above the average,compatible,3
-193,A little above the average,incompatible,5
-194,A little below average,control,4
-194,A little below average,compatible,5
-194,A little below average,incompatible,6
-195,A little above the average,control,10
-195,A little above the average,compatible,5
-195,A little above the average,incompatible,9
-196,A little below average,control,12.58
-196,A little below average,compatible,6.1499999999999995
-196,A little below average,incompatible,13.42
+188,Well below average,compatible,5.6
+188,Well below average,incompatible,7.7
+189,Average,control,3.04
+189,Average,compatible,2.71
+189,Average,incompatible,6.73
+190,Average,control,5.5
+190,Average,compatible,4.7
+190,Average,incompatible,6.8
+191,A little below average,control,3.8
+191,A little below average,compatible,6.9
+191,A little below average,incompatible,6.3
+192,A little below average,control,8.2
+192,A little below average,compatible,5.6
+192,A little below average,incompatible,11.5
+193,A little above the average,control,2.9
+193,A little above the average,compatible,3.2
+193,A little above the average,incompatible,4.5
+194,A little below average,control,3.5
+194,A little below average,compatible,5.4
+194,A little below average,incompatible,6.5
+195,A little above the average,control,10.2
+195,A little above the average,compatible,4.6
+195,A little above the average,incompatible,9.3
+196,A little below average,control,12.78
+196,A little below average,compatible,5.949999999999999
+196,A little below average,incompatible,13.02
 197,Average,control,5.08
-197,Average,compatible,4.46
-197,Average,incompatible,7.54
-198,A little below average,control,10.7
-198,A little below average,compatible,4.1
-198,A little below average,incompatible,14.15
-199,A little below average,control,5
-199,A little below average,compatible,4
-199,A little below average,incompatible,8
-200,Average,control,5.8
-200,Average,compatible,3.3
-200,Average,incompatible,5.8
-201,A little above the average,control,6
-201,A little above the average,compatible,3
-201,A little above the average,incompatible,6
-203,A little below average,control,4
-203,A little below average,compatible,3
+197,Average,compatible,4.86
+197,Average,incompatible,7.14
+198,A little below average,control,10.2
+198,A little below average,compatible,3.9999999999999996
+198,A little below average,incompatible,13.65
+199,A little below average,control,4.7
+199,A little below average,compatible,3.5
+199,A little below average,incompatible,7.7
+200,Average,control,6.2
+200,Average,compatible,3.6999999999999997
+200,Average,incompatible,5.3
+201,A little above the average,control,6.2
+201,A little above the average,compatible,3.3
+201,A little above the average,incompatible,6.5
+203,A little below average,control,4.5
+203,A little below average,compatible,2.6
 203,A little below average,incompatible,6
-204,Average,control,5
-204,Average,compatible,5
-204,Average,incompatible,6
+204,Average,control,4.8
+204,Average,compatible,5.5
+204,Average,incompatible,6.5
 205,Well below average,control,3
-205,Well below average,compatible,4
-205,Well below average,incompatible,8
+205,Well below average,compatible,4.4
+205,Well below average,incompatible,8.4
