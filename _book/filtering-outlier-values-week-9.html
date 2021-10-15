@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Introduction to R Studio (Week 1) | Statistics for Psychologists</title>
+  <title>7 Filtering outlier values (Week 9) | Statistics for Psychologists</title>
   <meta name="description" content="Course content for PSYC121 and PSYC122 at Lancaster University" />
   <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Introduction to R Studio (Week 1) | Statistics for Psychologists" />
+  <meta property="og:title" content="7 Filtering outlier values (Week 9) | Statistics for Psychologists" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="tombeesley/LU_PSYC121_122" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Introduction to R Studio (Week 1) | Statistics for Psychologists" />
+  <meta name="twitter:title" content="7 Filtering outlier values (Week 9) | Statistics for Psychologists" />
   
   <meta name="twitter:description" content="Course content for PSYC121 and PSYC122 at Lancaster University" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="descriptive-statistics-week-2.html"/>
+<link rel="prev" href="visualisation-ii-week-8.html"/>
+<link rel="next" href="correlation-week-11.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -250,67 +250,91 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction-to-r-studio-week-1" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> Introduction to R Studio (Week 1)</h1>
-<p>The exercises in this section are designed to familiarise you with working in R Studio.</p>
-<div id="lab-work" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Lab Work</h2>
-<div id="introducing-rstudio" class="section level3" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> Introducing RStudio</h3>
-<p>R and RStudio is the software that we will be using to explore and learn about analysis in your Psychology degree. It’s a computational engine: a very snazzy calculator that you should see as your friend and ally in the journey to understand and appreciate psychology. It sits alongside what we teach about the concepts and interpretation of statistical analysis. R is the core software, RStudio is the interface for interacting with it.</p>
-<p>Like even a simplest calculator, it just does what you ask (at least when you ask nicely!) but it requires the user to know what they want from it and to understand what it is telling you. A calculator can’t help a kid get the right answer to a multiplication problem if they don’t know the difference between multiplication and division and addition etc. And whilst a calculator is brilliant at doing the number crunching (and as a bonus, RStudio can help with turning the numbers into beautiful graphs and images too), even a calculator requires a thoughtful person to take the answers and make sensible interpretations from them. Therefore, we need to learn both about the concepts of statistical analysis on the one hand, and the processing of statistical information -through R- on the other. Over the next year, in these labs we will increasingly be using RStudio to focus on the latter, processing side, which will allow you to focus your energies on the conceptual side and its relevance for appreciating psychology.</p>
+<div id="filtering-outlier-values-week-9" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Filtering outlier values (Week 9)</h1>
+<p>Today we will do some work on checking data for unusual values, determining what is an “outlier” and removing those data before our analysis. In order to achieve this important step, we will learn a bit more about filtering data using the <code>filter()</code> command, and learn a new function, <code>mutate()</code>, which creates new columns.</p>
+<div id="pre-lab-work-4" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Pre-lab work</h2>
+<div id="online-tutorial-2" class="section level3" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> Online tutorial</h3>
+<p><a href="https://psylancs.shinyapps.io/Week_9_learnr/">Click here</a> to access the online tutorial for this week</p>
 </div>
-<div id="getting_started" class="section level3" number="2.1.2">
-<h3><span class="header-section-number">2.1.2</span> Getting started with R Studio</h3>
-<p>For Lancaster University Psychology Students, we recommend using the virtual lab installation, through which you create a PC-in-a-web browser and can then use R Studio through AppsAnywhere: <a href="https://mylab.lancaster.ac.uk/" class="uri">https://mylab.lancaster.ac.uk/</a> Connect to a “LU Windows 10 Lab”. Once you’ve logged on to this virtual desktop, you should be presented with the AppsAnywhere window:
-<img src="files/Week_1/AppsAnywhere.png" />
-Search for “R Studio” and click launch. When RStudio starts, it will look something like this:
-<img src="files/Week_1/RStudio.png" />
-We also recommend that you set up your University “H drive” by <a href="https://answers.lancaster.ac.uk/display/ISS/Personal+filestore+%28H+drive%29+help">following the instructions here</a></p>
-<p>If you do this, you can organise your files in one place and access them from any university computer that you log in to, including the lab machines in the Levy Lab and the virtual machine (see above). So this effectively acts as a free, cloud-based storage solution for your work (and even personal stuff).</p>
-</div>
-<div id="file-organisation" class="section level3" number="2.1.3">
-<h3><span class="header-section-number">2.1.3</span> File organisation</h3>
-<p>However you choose to store your files, it’s essential that you are careful about file organisation. As you progress through these exercises, you will find yourself downloading many data files, and creating many R scripts. Consider each week a new set of materials that should have it’s own folder. Get used to organising your work and you will be well placed to revise the material at a later date.</p>
-</div>
-<div id="lets-do-something" class="section level3" number="2.1.4">
-<h3><span class="header-section-number">2.1.4</span> Let’s do something!</h3>
-<p>In the console window on the left hand side, there’s a command prompt “&gt;”. This is where we ask RStudio to do our bidding!</p>
+<div id="r-studio-prep-work-3" class="section level3" number="7.1.2">
+<h3><span class="header-section-number">7.1.2</span> R Studio prep work</h3>
+<p>In preparation for Task 2, please do the following things:</p>
 <ol style="list-style-type: decimal">
-<li>Click in the console window and we will get R to work as a calculator. Type in:</li>
+<li><p>Download the files <a href="files/Week_9/gamble_salary_Wk9.csv">gamble_salary_Wk9.csv</a>, and <a href="files/Week_9/Week_9_Tasks.R">Week_9_Tasks.R</a></p></li>
+<li><p>Place the files in a suitable folder on the computer.</p></li>
+<li><p>Within R Studio, navigate to that folder in the “Files” pane and click OPEN (note the files are not shown in the folder)</p></li>
+<li><p>Select the “More” button and then “Set as Working Directory”</p></li>
+<li><p>Optional - create a new project in this folder (“File”, “New Project”, “Existing Directory”)</p></li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction-to-r-studio-week-1.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="dv">5</span></span></code></pre></div>
-<p>and press enter. You should get the answer (amazing huh? OK, maybe not <em>that</em> amazing…). Use your imagination – ask a simple arithmetic question of your own choosing!</p>
-<ol start="2" style="list-style-type: decimal">
-<li>In the first analysis lecture, we looked at measures of central tendency and how to calculate them. So let’s get R to do these calculations also!</li>
-</ol>
-<p>First, we tell R about the data from the lecture. Copy the following line and paste it into the console, then press enter to run it:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="introduction-to-r-studio-week-1.html#cb2-1" aria-hidden="true" tabindex="-1"></a>lecture1_data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">7</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">9</span>,<span class="dv">3</span>,<span class="dv">8</span>)</span></code></pre></div>
-<p>This creates an “object” called “lecture1_data”. We can then perform calculations on this object. For example, we can find the mean by using the following command (again, copy and paste)</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introduction-to-r-studio-week-1.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(lecture1_data)</span></code></pre></div>
-<p>Check the answer is the same we found in the lecture (6!).</p>
-<p>Next, let’s ask for the median:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introduction-to-r-studio-week-1.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(lecture1_data)</span></code></pre></div>
-<p>This also should be the answer from the lecture (7)</p>
-<p>R doesn’t have a single corresponding command for the <em>mode</em>, but we can use this series of commands:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introduction-to-r-studio-week-1.html#cb5-1" aria-hidden="true" tabindex="-1"></a>getmode <span class="ot">&lt;-</span> </span>
-<span id="cb5-2"><a href="introduction-to-r-studio-week-1.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">function</span>(lecture1_data) {</span>
-<span id="cb5-3"><a href="introduction-to-r-studio-week-1.html#cb5-3" aria-hidden="true" tabindex="-1"></a>    uniqv <span class="ot">&lt;-</span> <span class="fu">unique</span>(lecture1_data)</span>
-<span id="cb5-4"><a href="introduction-to-r-studio-week-1.html#cb5-4" aria-hidden="true" tabindex="-1"></a>    uniqv[<span class="fu">which.max</span>(<span class="fu">tabulate</span>(<span class="fu">match</span>(lecture1_data, uniqv)))]</span>
-<span id="cb5-5"><a href="introduction-to-r-studio-week-1.html#cb5-5" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb5-6"><a href="introduction-to-r-studio-week-1.html#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="introduction-to-r-studio-week-1.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">getmode</span>(lecture1_data)</span></code></pre></div>
-<p>This is just a bit of clever jiggery-pokery that gets the mode.</p>
 </div>
-<div id="extra-content" class="section level3" number="2.1.5">
-<h3><span class="header-section-number">2.1.5</span> Extra content</h3>
-<p>The commands above are designed to show you that with RStudio active, you can get quick and accurate answers to material covered in PSYC121 lectures.</p>
-<p>All we have asked is that you write (or copy in) text to get the information. However, after the lab, you could play around with RStudio in your own time and think about the following:</p>
-<p>In R, “&lt;-“ is the assignment operator as in the command we used:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="introduction-to-r-studio-week-1.html#cb6-1" aria-hidden="true" tabindex="-1"></a>lecture1_data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">7</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">9</span>,<span class="dv">3</span>,<span class="dv">8</span>)</span></code></pre></div>
-<p>We create the variable label on the left (lecture1.data) and we give it those number on the right. The name lecture1.data is largely arbitrary: try use a variable of your own naming (your own name?) instead - and then use that alternative name for the other commands.</p>
-<p>What does that tell you about the text used to get the mode? Can you figure out what each line does?</p>
-<p>Also, once you have created a variable, you can check what the variable comprises by calling it at the command line. Just write its name, and R should respond with all the data points (all the X values it knows about). Take note that, as you write the variable label, R studio should offer to “auto-complete” the name. It only does that if it you have defined the variable, or are writing a known command.</p>
+<div id="conceptual-prep-work-3" class="section level3" number="7.1.3">
+<h3><span class="header-section-number">7.1.3</span> Conceptual prep work</h3>
+<p>This work gets you to play with the power calculations in R, as shown in the final slide of the lecture this week.</p>
+<p>Start a new R Studio script and complete the following queries:</p>
+<ol style="list-style-type: decimal">
+<li><p>Add a line <code>library(pwr)</code> and run this</p></li>
+<li><p>add the line <code>pwr.t.test(d = .5, n = 100)</code> and run this.</p></li>
+<li><p>What is the reported power value and what does this mean?</p></li>
+<li><p>If you want to achieve 99% power to see an effect of .3, what sample size do you need?</p></li>
+<li><p>With a sample size of 60 and power of 80%, what minimum effect size would we be able to detect?</p></li>
+</ol>
+</div>
+</div>
+<div id="lab-work-r-studio-2" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Lab Work (R Studio)</h2>
+<div id="exploring-the-median-salary-estimates" class="section level3" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> Exploring the median salary estimates</h3>
+<p>In this task we will look at the data for UK median salary estimates, and focus first on exploring the sample in order to identify and potentially remove any unusual data.</p>
+<ol style="list-style-type: decimal">
+<li><p>Open the script “Week_9_Tasks.R” (see prep work)</p></li>
+<li><p>Run the first two lines of code:</p></li>
+</ol>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="filtering-outlier-values-week-9.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb20-2"><a href="filtering-outlier-values-week-9.html#cb20-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;gamble_salary.csv&quot;</span>)</span></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Add a <code>geom_boxplot()</code> to the <code>ggplot()</code> command to draw a box and whiskers plot, mapping the variable <em>salary_estimate</em> to either the x OR y axis. Note the outliers that are shown - we will now try to identify these data points and remove them.</li>
+</ol>
+</div>
+<div id="using-mutate-to-create-a-new-column" class="section level3" number="7.2.2">
+<h3><span class="header-section-number">7.2.2</span> Using mutate to create a new column</h3>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Add a new column (<code>mutate()</code>) to the data set, which uses the scale function to transform the salary estimates into z-scores.</p></li>
+<li><p>Complete the <code>arrange(desc())</code> to have the data sorted by the z-score column (use whatever name you made that column in the mutate command). Use <code>view(data)</code> to view the data set and get a sense of the data.</p></li>
+</ol>
+<p>Now that we have the salary estimates recoded as z-scores, we can think about what we might consider an extreme data point. If we remove z scores that are &gt;2 and &lt;-2 we will be removing ~5% of the extreme values.</p>
+<p><img src="files/Week_9/z_score_figure.png" />
+### Filtering the data</p>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Let’s take a look at how many results have these extreme z values in our sample. Complete the two filter commands, one to see how many results give <strong>z-scores over 2</strong>, and one to see how many results give <strong>z-scores under -2</strong>. You should see 6 at the high end, and 11 at the low end.</p></li>
+<li><p>Once you are happy with how the filters are working, use a filter command to <strong>remove</strong> these outliers from the data.</p></li>
+</ol>
+</div>
+<div id="salary-estimates-and-risk-seeking" class="section level3" number="7.2.3">
+<h3><span class="header-section-number">7.2.3</span> Salary estimates and risk-seeking</h3>
+<p>We will look at the salary estimates, as a function of whether respondants were “risk-seeking” or more “risk-averse”. You may remember that you were asked the following question:</p>
+<p><strong>Imagine you are on a game-show and you win £300. The presenter gives you have a choice: receive an additional £100 for sure, or take a gamble offering a 50% chance to gain £200 and a 50% chance to gain nothing. Which would you choose?</strong></p>
+<p>The classic finding is that around 80% of people play it safe and don’t gamble. Whether people in our sample chose to gamble or not, is coded in the column “gamble_gain” (TRUE = gamble, FALSE = don’t gamble).</p>
+<ol start="8" style="list-style-type: decimal">
+<li>Complete the group_by and summarise commands to assess whether the mean salary estimates differed between people who were risk-takers and those who were more risk-averse. Note that the summarise command includes a calculation of N, showing the number of each response: did our sample fit the original finding of ~80% people playing it safe?</li>
+</ol>
+</div>
+<div id="unrelated-samples-t-test" class="section level3" number="7.2.4">
+<h3><span class="header-section-number">7.2.4</span> Unrelated samples t-test</h3>
+<ol start="9" style="list-style-type: decimal">
+<li>Run a unrelated (paired = FALSE) t-test on the data to see if people who are more risk averse or risk-seeking give different salary estimates.</li>
+</ol>
+<p>For those interested in the gambling variable, note that we asked a second version of the same scenario:</p>
+<p><strong>Imagine you are on a different game-show and you win £500. Here you are given a choice between either losing £100 from your winnings for sure, or taking a gamble offering a 50% chance to lose nothing and a 50% chance to lose £200. Which would you choose?</strong></p>
+<ol start="10" style="list-style-type: decimal">
+<li><p>When phrased as a loss, more people tend to gamble. Did our sample show this result? Were the salary estimates of people who were willing to gamble under this scenario different to those not willing to gamble?</p></li>
+<li><p>Use the same formula you used in the t-statistic in the calculation of Cohen’s d. What is the effect size?</p></li>
+<li><p>Work out what our final sample size was in the data after we conducted the filtering (hint: look in the environment). Use this to conduct a power analysis to see what effect size we could have seen with a power of 80%.</p></li>
+</ol>
+<p><strong>The t-test table (criterion values of t)</strong>
+<img src="files/Week_9/ttable.png" /></p>
 
 </div>
 </div>
@@ -320,8 +344,8 @@ We also recommend that you set up your University “H drive” by <a href="http
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="descriptive-statistics-week-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="visualisation-ii-week-8.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="correlation-week-11.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
